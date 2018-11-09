@@ -6,6 +6,7 @@ require "pry"
 
 module Jekyll
   class IcalTag < Liquid::Block
+    require_relative "jekyll-ical-tag/event"
     require_relative "jekyll-ical-tag/calendar_parser"
     require_relative "jekyll-ical-tag/calendar_limiter"
 
@@ -39,19 +40,17 @@ module Jekyll
 
       context.stack do
         events.each_with_index do |event, index|
-
-          attendees = event.attendee.map(&:to_s).map {|a| a.slice!("mailto:"); a }
-
           context['event'] = {
             'index' => index,
             'uid' => event.uid.presence,
             'summary' => event.summary.presence,
             'description' => event.description.presence,
+            'simple_html_description' => event.simple_html_description.presence,
             'location' => event.location.presence,
-            'url' => event.url&.to_s.presence,
+            'url' => event.url&.to_s.presence || event.description_urls.first,
             'start_time' => event.dtstart&.to_time.presence,
             'end_time' => event.dtend&.to_time.presence,
-            'attendees' => attendees,
+            'attendees' => event.attendees,
           }
 
           context['forloop'] = {

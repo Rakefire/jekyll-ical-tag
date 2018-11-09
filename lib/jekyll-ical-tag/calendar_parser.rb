@@ -12,7 +12,11 @@ module Jekyll
       end
 
       def events
-        @events ||= Icalendar::Event.parse(ics_feed).sort { |e1, e2| e1.dtstart <=> e2.dtstart }
+        @events ||= begin
+          Icalendar::Event.parse(ics_feed)
+                          .sort { |e1, e2| e1.dtstart <=> e2.dtstart }
+                          .map{|e| Jekyll::IcalTag::Event.new(e) } 
+        end
       end
 
       private

@@ -23,6 +23,7 @@ plugins:
   {% calendar url: https://space.floern.com/launch.ics reverse: true only_future: true %}
     {{ event.summary }}
     {{ event.description }}
+    {{ event.simple_html_description }}
     {{ event.start_time }}
     {{ event.end_time }}
     {{ event.url }}
@@ -43,8 +44,9 @@ plugins:
 
 - `summary` - Title or name of event
 - `description` - Notes/description of event
+- `simple_html_description` - Notes/description of event with urls auto-linked
 - `location` - Location of event
 - `start_time` - start time of event
 - `end_time` - end time of event
-- `url` - url of event, if provided
+- `url` - url of event, if provided, if not, take the first url from the description.
 - `attendees` - [Array] of attendees names/emails
