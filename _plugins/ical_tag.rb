@@ -89,30 +89,29 @@ module Jekyll
 
       context.stack do
         events.each_with_index do |event, index|
+          attendees = event.attendee.map(&:to_s).map { |a| a.slice!("mailto:"); a }
 
-          attendees = event.attendee.map(&:to_s).map {|a| a.slice!("mailto:"); a }
-
-          context['event'] = {
-            'index' => index,
-            'uid' => event.uid,
-            'summary' => event.summary,
-            'description' => event.description,
-            'location' => event.location,
-            'url' => event.url&.to_s,
-            'start_time' => event.dtstart&.to_time,
-            'end_time' => event.dtend&.to_time,
-            'attendees' => attendees,
+          context["event"] = {
+            "index" => index,
+            "uid" => event.uid,
+            "summary" => event.summary,
+            "description" => event.description,
+            "location" => event.location,
+            "url" => event.url&.to_s,
+            "start_time" => event.dtstart&.to_time,
+            "end_time" => event.dtend&.to_time,
+            "attendees" => attendees,
           }
 
-          context['forloop'] = {
-            'name' => 'calendar',
-            'length' => length,
-            'index' => index + 1,
-            'index0' => index,
-            'rindex' => length - index,
-            'rindex0' => length - index - 1,
-            'first' => (index == 0),
-            'last' => (index == length - 1)
+          context["forloop"] = {
+            "name" => "calendar",
+            "length" => length,
+            "index" => index + 1,
+            "index0" => index,
+            "rindex" => length - index,
+            "rindex0" => length - index - 1,
+            "first" => (index == 0),
+            "last" => (index == length - 1),
           }
 
           result << nodelist.map do |n|
@@ -138,11 +137,11 @@ module Jekyll
     end
 
     def set_reverse!
-      @reverse = @attributes['order'] == 'reverse'
+      @reverse = @attributes["order"] == "reverse"
     end
 
     def set_url!
-      @url = @attributes['url']
+      @url = @attributes["url"]
       raise "No URL provided" unless @url
     end
 
@@ -165,8 +164,8 @@ module Jekyll
     def set_before_date!
       @before_date =
         begin
-          if @attributes['before_date']
-            Time.parse(@attributes['before_date'])
+          if @attributes["before_date"]
+            Time.parse(@attributes["before_date"])
           end
         rescue => e
           nil
@@ -176,8 +175,8 @@ module Jekyll
     def set_after_date!
       @after_date =
         begin
-          if @attributes['after_date']
-            Time.parse(@attributes['after_date'])
+          if @attributes["after_date"]
+            Time.parse(@attributes["after_date"])
           end
         rescue => e
           nil
@@ -186,4 +185,4 @@ module Jekyll
   end
 end
 
-Liquid::Template.register_tag('ical', Jekyll::CalendarTag)
+Liquid::Template.register_tag("ical", Jekyll::CalendarTag)

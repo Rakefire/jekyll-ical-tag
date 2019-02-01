@@ -1,3 +1,4 @@
+# encoding: utf-8
 # frozen_string_literal: true
 
 require "jekyll"
@@ -40,28 +41,28 @@ module Jekyll
 
       context.stack do
         events.each_with_index do |event, index|
-          context['event'] = {
-            'index' => index,
-            'uid' => event.uid.presence,
-            'summary' => event.summary.presence,
-            'description' => event.description.presence,
-            'simple_html_description' => event.simple_html_description.presence,
-            'location' => event.location.presence,
-            'url' => event.url&.to_s.presence || event.description_urls.first,
-            'start_time' => event.dtstart&.to_time.presence,
-            'end_time' => event.dtend&.to_time.presence,
-            'attendees' => event.attendees,
+          context["event"] = {
+            "index" => index,
+            "uid" => event.uid.presence,
+            "summary" => event.summary.presence,
+            "description" => event.description.presence,
+            "simple_html_description" => event.simple_html_description.presence,
+            "location" => event.location.presence,
+            "url" => event.url&.to_s.presence || event.description_urls.first,
+            "start_time" => event.dtstart&.to_time.presence,
+            "end_time" => event.dtend&.to_time.presence,
+            "attendees" => event.attendees,
           }
 
-          context['forloop'] = {
-            'name' => 'ical',
-            'length' => length,
-            'index' => index + 1,
-            'index0' => index,
-            'rindex' => length - index,
-            'rindex0' => length - index - 1,
-            'first' => (index == 0),
-            'last' => (index == length - 1)
+          context["forloop"] = {
+            "name" => "ical",
+            "length" => length,
+            "index" => index + 1,
+            "index0" => index,
+            "rindex" => length - index,
+            "rindex0" => length - index - 1,
+            "first" => (index == 0),
+            "last" => (index == length - 1),
           }
 
           result << nodelist.map do |n|
@@ -87,11 +88,11 @@ module Jekyll
     end
 
     def set_reverse!
-      @reverse = @attributes['order'] == 'reverse'
+      @reverse = @attributes["order"] == "reverse"
     end
 
     def set_url!
-      @url = @attributes['url']
+      @url = @attributes["url"]
       raise "No URL provided" unless @url
     end
 
@@ -114,8 +115,8 @@ module Jekyll
     def set_before_date!
       @before_date =
         begin
-          if @attributes['before_date']
-            Time.parse(@attributes['before_date'])
+          if @attributes["before_date"]
+            Time.parse(@attributes["before_date"])
           end
         rescue => e
           nil
@@ -125,8 +126,8 @@ module Jekyll
     def set_after_date!
       @after_date =
         begin
-          if @attributes['after_date']
-            Time.parse(@attributes['after_date'])
+          if @attributes["after_date"]
+            Time.parse(@attributes["after_date"])
           end
         rescue => e
           nil
@@ -135,4 +136,4 @@ module Jekyll
   end
 end
 
-Liquid::Template.register_tag('ical', Jekyll::IcalTag)
+Liquid::Template.register_tag("ical", Jekyll::IcalTag)
