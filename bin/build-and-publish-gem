@@ -1,0 +1,5 @@
+#!/bin/sh
+
+rm *.gem
+gem build jekyll-ical-tag.gemspec
+gem push jekyll-ical-tag-*.gem
