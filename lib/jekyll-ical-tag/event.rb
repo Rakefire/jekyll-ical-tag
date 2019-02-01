@@ -1,3 +1,4 @@
+# encoding: utf-8
 # frozen_string_literal: true
 
 require "uri"
@@ -25,11 +26,11 @@ module Jekyll
       end
 
       def attendees
-        attendee.map(&:to_s).map {|a| a.slice!("mailto:"); a }
+        attendee.map(&:to_s).map { |a| a.slice!("mailto:"); a }
       end
 
       def description_urls
-        @description_urls ||= description.scan(URL_REGEX).to_a
+        @description_urls ||= description.to_s.force_encoding("UTF-8").scan(URL_REGEX).to_a
       end
 
       private

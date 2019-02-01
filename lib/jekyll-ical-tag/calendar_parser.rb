@@ -1,3 +1,4 @@
+# encoding: utf-8
 # frozen_string_literal: true
 
 require "api_cache"
@@ -15,7 +16,7 @@ module Jekyll
         @events ||= begin
           Icalendar::Event.parse(ics_feed)
                           .sort { |e1, e2| e1.dtstart <=> e2.dtstart }
-                          .map{|e| Jekyll::IcalTag::Event.new(e) } 
+                          .map { |e| Jekyll::IcalTag::Event.new(e) }
         end
       end
 
