@@ -20,7 +20,7 @@ plugins:
 ## Syntax
 
 ```html
-  {% calendar url: https://space.floern.com/launch.ics reverse: true only_future: true %}
+  {% ical url: https://space.floern.com/launch.ics reverse: true only_future: true %}
     {{ event.summary }}
     {{ event.description }}
     {{ event.simple_html_description }}
@@ -28,7 +28,7 @@ plugins:
     {{ event.end_time }}
     {{ event.url }}
     {{ event.attendees }}
-  {% endcalendar %}
+  {% endical %}
 ```
 
 ## Options
