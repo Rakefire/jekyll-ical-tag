@@ -17,7 +17,7 @@ module Jekyll
 
       def simple_html_description
         @simple_html_description ||= begin
-          description.clone.tap do |d|
+          description&.clone.tap do |d|
             description_urls.each do |url|
               d.gsub! url, %(<a href='#{url}'>#{url}</a>)
             end
