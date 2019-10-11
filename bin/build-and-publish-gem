@@ -1,5 +1,5 @@
 #!/bin/sh
 
-rm *.gem
-gem build jekyll-ical-tag.gemspec
-gem push jekyll-ical-tag-*.gem
+rm -f *.gem
+bundle exec gem build jekyll-ical-tag.gemspec
+bundle exec gem push jekyll-ical-tag-*.gem
