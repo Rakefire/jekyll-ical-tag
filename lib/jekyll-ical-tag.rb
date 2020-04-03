@@ -44,7 +44,7 @@ module Jekyll
           context["event"] = {
             "index" => index,
             "uid" => event.uid.presence,
-            "summary" => event.summary.presence,
+            "summary" => event.summary.force_encoding("UTF-8").presence,
             "description" => event.description.presence,
             "simple_html_description" => event.simple_html_description.presence,
             "location" => event.location.presence,
