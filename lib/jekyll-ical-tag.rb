@@ -48,7 +48,7 @@ module Jekyll
             "description" => as_utf8(event.description).presence,
             "simple_html_description" => as_utf8(event.simple_html_description).presence,
             "location" => as_utf8(event.location).presence,
-            "url" => event.url&.to_s.presence || event.description_urls.first,
+            "url" => as_utf8(event.url&.to_s.presence || event.description_urls.first).presence,
             "start_time" => event.dtstart&.to_time.presence,
             "end_time" => event.dtend&.to_time.presence,
             "attendees" => event.attendees,
@@ -81,6 +81,8 @@ module Jekyll
     private
 
     def as_utf8(str)
+      return unless str
+
       str.force_encoding("UTF-8")
     end
 
