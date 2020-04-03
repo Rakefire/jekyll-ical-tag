@@ -44,11 +44,11 @@ module Jekyll
           context["event"] = {
             "index" => index,
             "uid" => event.uid.presence,
-            "summary" => event.summary.presence,
-            "description" => event.description.presence,
-            "simple_html_description" => event.simple_html_description.presence,
-            "location" => event.location.presence,
-            "url" => event.url&.to_s.presence || event.description_urls.first,
+            "summary" => as_utf8(event.summary).presence,
+            "description" => as_utf8(event.description).presence,
+            "simple_html_description" => as_utf8(event.simple_html_description).presence,
+            "location" => as_utf8(event.location).presence,
+            "url" => as_utf8(event.url&.to_s.presence || event.description_urls.first).presence,
             "start_time" => event.dtstart&.to_time.presence,
             "end_time" => event.dtend&.to_time.presence,
             "attendees" => event.attendees,
@@ -80,6 +80,12 @@ module Jekyll
 
     private
 
+    def as_utf8(str)
+      return unless str
+
+      str.force_encoding("UTF-8")
+    end
+
     def scan_attributes!
       @attributes = {}
       @markup.scan(Liquid::TagAttributes) do |key, value|
@@ -101,8 +107,7 @@ module Jekyll
       only_past = @attributes["only_past"] == "true"
 
       raise "Set only_future OR only_past, not both" if only_future && only_past
-      @only =
-        case
+      @only = case
         when only_future
           :future
         when only_past
@@ -113,8 +118,7 @@ module Jekyll
     end
 
     def set_before_date!
-      @before_date =
-        begin
+      @before_date = begin
           if @attributes["before_date"]
             Time.parse(@attributes["before_date"])
           end
@@ -124,8 +128,7 @@ module Jekyll
     end
 
     def set_after_date!
-      @after_date =
-        begin
+      @after_date = begin
           if @attributes["after_date"]
             Time.parse(@attributes["after_date"])
           end
