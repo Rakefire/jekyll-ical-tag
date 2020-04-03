@@ -8,7 +8,7 @@ Description: Pull ICS feed and provide a for-like loop of calendar events
 
 To your Gemfile:
 
-`gem 'jekyll-ical-tag', git: "https://github.com/Rakefire/jekyll-ical-tag.git"`
+`gem 'jekyll-ical-tag'
 
 To your `_config.yml`
 
