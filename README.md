@@ -8,7 +8,7 @@ Description: Pull ICS feed and provide a for-like loop of calendar events
 
 To your Gemfile:
 
-`gem 'jekyll-ical-tag'
+`gem 'jekyll-ical-tag'`
 
 To your `_config.yml`
 
@@ -50,3 +50,7 @@ plugins:
 - `end_time` - end time of event
 - `url` - url of event, if provided, if not, take the first url from the description.
 - `attendees` - [Array] of attendees names/emails
+
+# Special Thanks
+
+Special thanks to the following contributors: @marchehab98 @meitar
