@@ -17,12 +17,12 @@ module Jekyll
 
       def simple_html_description
         @simple_html_description ||= begin
-          description&.clone.tap do |d|
-            description_urls.each do |url|
-              d.force_encoding("UTF-8").gsub! url, %(<a href='#{url}'>#{url}</a>)
+            description&.clone.tap do |d|
+              description_urls.each do |url|
+                d.gsub! url, %(<a href='#{url}'>#{url}</a>)
+              end
             end
           end
-        end
       end
 
       def attendees
@@ -30,7 +30,7 @@ module Jekyll
       end
 
       def description_urls
-        @description_urls ||= description.to_s.force_encoding("UTF-8").scan(URL_REGEX).to_a
+        @description_urls ||= description.to_s.scan(URL_REGEX).to_a
       end
 
       private
