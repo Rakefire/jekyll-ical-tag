@@ -39,6 +39,7 @@ plugins:
 
 - `before_date` - limits returned events to dates before a specific date. This gets parsed with Ruby's Time.parse (e.g. 01-01-2018)
 - `after_date` - limits returned events to dates before a specific date. This gets parsed with Ruby's Time.parse (e.g. 01-01-2018).
+- `limit` - limits the number of returned events to the first N events matching the specified criteria. For example, `{% ical url: https://example.com/events.ics only_future:true limit:5 %}` returns the first five future events.
 
 ## Event Attributes:
 
