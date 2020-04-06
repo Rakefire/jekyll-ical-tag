@@ -18,6 +18,7 @@ module Jekyll
       @markup = markup
 
       scan_attributes!
+      set_limit!
       set_reverse!
       set_url!
       set_only!
@@ -37,6 +38,9 @@ module Jekyll
       parser = CalendarLimiter.new(parser, after_date: @after_date)
 
       events = parser.events
+      if @limit
+        events = events.first(@limit)
+      end
       length = events.length
 
       context.stack do
@@ -90,6 +94,14 @@ module Jekyll
       @attributes = {}
       @markup.scan(Liquid::TagAttributes) do |key, value|
         @attributes[key] = value
+      end
+    end
+
+    def set_limit!
+      if @attributes["limit"]
+        @limit = @attributes["limit"].to_i
+      else
+        @limit = nil
       end
     end
 
