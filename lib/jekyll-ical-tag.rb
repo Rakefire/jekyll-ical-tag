@@ -31,6 +31,11 @@ module Jekyll
 
       result = []
 
+      # Dereference the URL if we were passed a variable name.
+      if context.scopes.first[@url]
+        @url = context.scopes.first[@url]
+      end
+
       parser = CalendarParser.new(@url)
       parser = CalendarLimiter.new(parser, only: @only)
       parser = CalendarLimiter.new(parser, reverse: @reverse)
