@@ -30,10 +30,10 @@ module Jekyll
 
       result = []
 
-      # Dereference the URL if we were passed a variable name.
-      if context.scopes.first[@url]
-        @url = context.scopes.first[@url]
-      end
+      set_url_from_assigned_value!(context)
+      set_url_from_page_attributes!(context)
+
+      raise "No URL provided or in innapropriate form '#{@url}'" unless has_valid_url?
 
       parser = CalendarParser.new(@url)
       parser = CalendarLimiter.new(parser, only: @only)
@@ -86,6 +86,30 @@ module Jekyll
 
     private
 
+    def has_valid_url?
+      !!(@url =~ URI::regexp)
+    end
+
+    def set_url_from_page_attributes!(context)
+      return if has_valid_url?
+
+      # Dereference @url from something like "page.calender_url" to the page's calendar_url
+
+      dig_attrs = @url.split(".")
+      dig_attrs[0] = dig_attrs[0].to_sym if dig_attrs[0].present?
+      if dug_result = context.registers.dig(*dig_attrs)
+        @url = dug_result
+      end
+    end
+
+    def set_url_from_assigned_value!(context)
+      return if has_valid_url?
+      return unless context.scopes.first[@url]
+
+      # Dereference the URL if we were passed a variable name.
+      @url = context.scopes.first[@url]
+    end
+
     def as_utf8(str)
       return unless str
 
@@ -110,7 +134,6 @@ module Jekyll
 
     def set_url!
       @url = @attributes["url"]
-      raise "No URL provided" unless @url
     end
 
     def set_only!
