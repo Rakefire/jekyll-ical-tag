@@ -46,6 +46,8 @@ class CalendarLimiter
       parser.events.select do |event|
         event.dtstart.to_time < options[:before_date]
       end
+    when options[:limit]
+      parser.events.first(options[:limit].to_i)
     else
       parser.events
     end
@@ -150,8 +152,7 @@ module Jekyll
       only_past = @attributes["only_past"] == "true"
 
       raise "Set only_future OR only_past, not both" if only_future && only_past
-      @only =
-        case
+      @only = case
         when only_future
           :future
         when only_past
@@ -162,8 +163,7 @@ module Jekyll
     end
 
     def set_before_date!
-      @before_date =
-        begin
+      @before_date = begin
           if @attributes["before_date"]
             Time.parse(@attributes["before_date"])
           end
@@ -173,8 +173,7 @@ module Jekyll
     end
 
     def set_after_date!
-      @after_date =
-        begin
+      @after_date = begin
           if @attributes["after_date"]
             Time.parse(@attributes["after_date"])
           end
