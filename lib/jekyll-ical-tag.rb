@@ -104,10 +104,16 @@ module Jekyll
 
     def set_url_from_assigned_value!(context)
       return if has_valid_url?
-      return unless context.scopes.first[@url]
 
       # Dereference the URL if we were passed a variable name.
-      @url = context.scopes.first[@url]
+      url = nil
+      for s in context.scopes
+        if s[@url]
+          url = s[@url]
+          break # First match found is the one we want.
+        end
+      end
+      @url = url
     end
 
     def as_utf8(str)
