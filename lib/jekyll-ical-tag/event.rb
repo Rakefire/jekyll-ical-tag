@@ -35,7 +35,7 @@ module Jekyll
         @simple_html_description ||= begin
             description&.clone.tap do |d|
               description_urls.each do |url|
-                d.gsub! url, %(<a href='#{url}'>#{url}</a>)
+                d.force_encoding("UTF-8").gsub! url, %(<a href='#{url}'>#{url}</a>)
               end
             end
           end
