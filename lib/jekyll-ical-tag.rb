@@ -73,16 +73,15 @@ module Jekyll
           # Ensure all event values are utf8 encoded strings
           # Ensure times (from dates)
           # Ensure present
-          context["event"].transform_values do |value|
+          context["event"].transform_values! do |value|
             v = case value
-              when String
+              when String, Icalendar::Values::Text
                 value.force_encoding("UTF-8")
-              when Date
+              when Date, Icalendar::Values::DateTime
                 value.to_time
               else
                 value
               end
-
             v.presence
           end
 
