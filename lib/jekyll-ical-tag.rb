@@ -49,15 +49,29 @@ module Jekyll
         events.each_with_index do |event, index|
           context["event"] = {
             "index" => index,
-            "uid" => event.uid.presence,
-            "summary" => as_utf8(event.summary).presence,
-            "description" => as_utf8(event.description).presence,
-            "simple_html_description" => as_utf8(event.simple_html_description).presence,
-            "location" => as_utf8(event.location).presence,
-            "url" => as_utf8(event.url&.to_s.presence || event.description_urls.first).presence,
-            "start_time" => event.dtstart&.to_time.presence,
-            "end_time" => event.dtend&.to_time.presence,
+
+            # RFC 5545 conformant(-ish) properties.
             "attendees" => event.attendees,
+            "class" => as_utf8(event.class).presence,
+            "created" => event.created&.to_time.presence,
+            "description" => as_utf8(event.description).presence,
+            "dtend" => event.dtend&.to_time.presence,
+            "dtstamp" => event.dtstamp&.to_time.presence,
+            "dtstart" => event.dtstart&.to_time.presence,
+            "geo" => event.geo.presence,
+            "last_modified" => event.last_modified&.to_time.presence,
+            "location" => as_utf8(event.location).presence,
+            "status" => as_utf8(event.status).presence,
+            "summary" => as_utf8(event.summary).presence,
+            "uid" => event.uid.presence,
+            "url" => as_utf8(event.url&.to_s.presence || event.description_urls.first).presence,
+
+            # Supported but non-standard attributes.
+            "simple_html_description" => as_utf8(event.simple_html_description).presence,
+
+            # Deprecated attribute names.
+            "end_time" => event.dtend&.to_time.presence,
+            "start_time" => event.dtstart&.to_time.presence,
           }
 
           context["forloop"] = {

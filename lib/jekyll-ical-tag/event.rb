@@ -13,7 +13,24 @@ module Jekyll
         @event = event
       end
 
-      def_delegators :event, :attendee, :uid, :summary, :description, :location, :url, :dtstart, :dtend
+      def_delegators :event,
+        :attendee,
+        :created,
+        :description,
+        :dtend,
+        :dtstamp,
+        :dtstart,
+        :geo,
+        :last_modified,
+        :location,
+        :summary,
+        :status,
+        :uid,
+        :url
+
+      def class
+        event.ip_class
+      end
 
       def simple_html_description
         @simple_html_description ||= begin
