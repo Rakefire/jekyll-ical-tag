@@ -50,32 +50,41 @@ module Jekyll
         length = events.length
 
         events.each_with_index do |event, index|
-          context["event"] = {
-            "index" => index,
+          # Init
+          context["event"] = {}
 
-            # RFC 5545 conformant(-ish) properties.
-            "attendees" => event.attendees,
-            "class" => as_utf8(event.class).presence,
-            "created" => event.created&.to_time.presence,
-            "description" => as_utf8(event.description).presence,
-            "dtend" => event.dtend&.to_time.presence,
-            "dtstamp" => event.dtstamp&.to_time.presence,
-            "dtstart" => event.dtstart&.to_time.presence,
-            "geo" => event.geo.presence,
-            "last_modified" => event.last_modified&.to_time.presence,
-            "location" => as_utf8(event.location).presence,
-            "status" => as_utf8(event.status).presence,
-            "summary" => as_utf8(event.summary).presence,
-            "uid" => event.uid.presence,
-            "url" => as_utf8(event.url&.to_s.presence || event.description_urls.first).presence,
+          # Jekyll helper variables
+          context["event"]["index"] = index
 
-            # Supported but non-standard attributes.
-            "simple_html_description" => as_utf8(event.simple_html_description).presence,
+          # RFC 5545 conformant and custom properties.
+          context["event"].merge!(event.all_properties)
 
-            # Deprecated attribute names.
-            "end_time" => event.dtend&.to_time.presence,
-            "start_time" => event.dtstart&.to_time.presence,
-          }
+          # Supported but non-standard attributes.
+          context["event"]["attendees"] = event.attendees
+          context["event"]["simple_html_description"] = event.simple_html_description
+
+          # Overridden values
+          context["event"]["url"] ||= event.description_urls.first
+
+          # Deprecated attribute names.
+          context["event"]["end_time"] = context["event"]["dtend"]
+          context["event"]["start_time"] = context["event"]["dtstart"]
+
+          # Ensure all event values are utf8 encoded strings
+          # Ensure times (from dates)
+          # Ensure present
+          context["event"].transform_values do |value|
+            v = case value
+              when String
+                value.force_encoding("UTF-8")
+              when Date
+                value.to_time
+              else
+                value
+              end
+
+            v.presence
+          end
 
           context["forloop"] = {
             "name" => "ical",
@@ -120,12 +129,6 @@ module Jekyll
 
       # Dereference the URL if we were passed a variable name.
       scope[@url]
-    end
-
-    def as_utf8(str)
-      return unless str
-
-      str.force_encoding("UTF-8")
     end
 
     def scan_attributes!
