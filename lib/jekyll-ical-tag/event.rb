@@ -13,6 +13,8 @@ module Jekyll
         @event = event
       end
 
+      def_delegators :event, :dtstart, :dtend
+
       def all_properties
         @props ||= begin
             props = {}
