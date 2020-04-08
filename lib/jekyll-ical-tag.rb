@@ -3,7 +3,6 @@
 
 require "jekyll"
 require "jekyll-ical-tag/version"
-require "pry"
 
 module Jekyll
   class IcalTag < Liquid::Block
