@@ -40,11 +40,9 @@ module Jekyll
       parser = CalendarLimiter.new(parser, reverse: @reverse)
       parser = CalendarLimiter.new(parser, before_date: @before_date)
       parser = CalendarLimiter.new(parser, after_date: @after_date)
+      parser = CalendarLimiter.new(parser, limit: @limit)
 
       events = parser.events
-      if @limit
-        events = events.first(@limit)
-      end
       length = events.length
 
       context.stack do
@@ -102,11 +100,8 @@ module Jekyll
     end
 
     def set_limit!
-      if @attributes["limit"]
-        @limit = @attributes["limit"].to_i
-      else
-        @limit = nil
-      end
+      @limit = nil
+      @limit = @attributes["limit"].to_i if @attributes["limit"]
     end
 
     def set_reverse!

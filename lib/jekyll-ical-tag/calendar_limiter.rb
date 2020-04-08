@@ -31,6 +31,8 @@ module Jekyll
           parser.events.select do |event|
             event.dtstart.to_time < options[:before_date]
           end
+        when options[:limit]
+          parser.events.first(options[:limit])
         else
           parser.events
         end
