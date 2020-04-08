@@ -13,7 +13,23 @@ module Jekyll
         @event = event
       end
 
-      def_delegators :event, :attendee, :uid, :summary, :description, :location, :url, :dtstart, :dtend
+      def_delegators :event, :dtstart, :dtend
+
+      def all_properties
+        @props ||= begin
+            props = {}
+
+            # RFC 5545 Properties
+            event.class.properties.each do |property|
+              props[property] = event.property(property)
+            end
+
+            # custom properties
+            props = props.merge(event.custom_properties)
+
+            props
+          end
+      end
 
       def simple_html_description
         @simple_html_description ||= begin
@@ -35,6 +51,7 @@ module Jekyll
 
       private
 
+      def_delegators :event, :description, :attendee
       attr_reader :event
     end
   end
