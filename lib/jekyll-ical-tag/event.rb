@@ -46,7 +46,7 @@ module Jekyll
       end
 
       def description_urls
-        @description_urls ||= description.to_s.scan(URL_REGEX).to_a
+        @description_urls ||= description.to_s.force_encoding("UTF-8").scan(URL_REGEX).to_a
       end
 
       private
