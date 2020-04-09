@@ -31,8 +31,7 @@ module Jekyll
       result = []
 
       context.stack do
-        url = get_url_from_assigned_value(context) ||
-              get_url_from_page_attributes(context) ||
+        url = get_dereferenced_url(context) ||
               @url
 
         raise "No URL provided or in innapropriate form '#{url}'" unless is_valid_url?(url)
@@ -79,6 +78,8 @@ module Jekyll
                 value.force_encoding("UTF-8")
               when Date, Icalendar::Values::DateTime
                 value.to_time
+              when Icalendar::Values::Uri
+                value.to_s
               else
                 value
               end
@@ -115,19 +116,10 @@ module Jekyll
       !!(url =~ URI::regexp)
     end
 
-    def get_url_from_page_attributes(context)
-      # Dereference url from something like "page.calender_url" to the page's calendar_url
-      dig_attrs = @url.split(".")
-      dig_attrs[0] = dig_attrs[0].to_sym if dig_attrs[0].present?
+    def get_dereferenced_url(context)
+      return unless context.key?(@url)
 
-      context.registers.dig(*dig_attrs) # will return result or nil (if not found)
-    end
-
-    def get_url_from_assigned_value(context)
-      return unless scope = context.scopes.find { |scope| scope[@url] }
-
-      # Dereference the URL if we were passed a variable name.
-      scope[@url]
+      context[@url]
     end
 
     def scan_attributes!
