@@ -79,6 +79,8 @@ module Jekyll
                 value.force_encoding("UTF-8")
               when Date, Icalendar::Values::DateTime
                 value.to_time
+              when Icalendar::Values::Uri
+                value.to_s
               else
                 value
               end
