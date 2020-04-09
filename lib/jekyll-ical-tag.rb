@@ -31,8 +31,7 @@ module Jekyll
       result = []
 
       context.stack do
-        url = get_url_from_assigned_value(context) ||
-              get_url_from_page_attributes(context) ||
+        url = get_dereferenced_url(context) ||
               @url
 
         raise "No URL provided or in innapropriate form '#{url}'" unless is_valid_url?(url)
@@ -117,29 +116,10 @@ module Jekyll
       !!(url =~ URI::regexp)
     end
 
-    def get_url_from_page_attributes(context)
-      return if is_valid_url?(@url)
+    def get_dereferenced_url(context)
+      return unless context.key?(@url)
 
-      # Dereference url from something like "page.calendar_url" to the page's calendar_url
-      attributes = @url.split(".")
-      attributes[0] = attributes[0].to_sym if attributes[0].present?
-
-      result = context.registers
-      attributes.each { |attribute| result = result&.fetch(attribute) }
-
-      if is_valid_url?(result)
-        result
-      else
-        nil
-      end
-    end
-
-    def get_url_from_assigned_value(context)
-      return if is_valid_url?(@url)
-      return unless scope = context.scopes.find { |scope| scope[@url] }
-
-      # Dereference the URL if we were passed a variable name.
-      scope[@url]
+      context[@url]
     end
 
     def scan_attributes!
