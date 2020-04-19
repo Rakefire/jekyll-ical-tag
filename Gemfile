@@ -7,7 +7,6 @@ gem 'icalendar'
 gem 'activesupport'
 
 group :development, :test do
-  gem 'pry'
   gem 'rspec'
   gem 'nokogiri'
 end
