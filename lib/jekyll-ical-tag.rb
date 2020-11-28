@@ -36,7 +36,11 @@ module Jekyll
       context.stack do
         url = get_dereferenced_url(context) || @url
 
-        calendar_feed_coordinator = CalendarFeedCoordinator.new(url: url)
+        calendar_feed_coordinator = CalendarFeedCoordinator.new(
+          url: url, only: @only, reverse: @reverse,
+          before_date: @before_date, after_date: @after_date,
+          limit: @limit
+        )
         events = calendar_feed_coordinator.events
         event_count = events.length
 
