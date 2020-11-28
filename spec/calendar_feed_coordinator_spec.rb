@@ -6,7 +6,7 @@ EXAMPLE_RAW_FEEDS = {
   italian: File.read("spec/support/serenoregis.ics")
 }
 
-describe Jekyll::IcalTag::CalendarFeedCoordinator do
+RSpec.describe Jekyll::IcalTag::CalendarFeedCoordinator do
   context "happy path" do
     let(:coordinator) { Jekyll::IcalTag::CalendarFeedCoordinator.new(url: "https://space.floern.com/launch.ics") }
 
@@ -161,6 +161,19 @@ describe Jekyll::IcalTag::CalendarFeedCoordinator do
         expect { event.simple_html_description }.to_not raise_error
         expect { event.attendees }.to_not raise_error
         expect { event.description_urls }.to_not raise_error
+      end
+    end
+
+    it "selected outputs should always be strings" do
+      coordinator.events.each do |event|
+        expect(event.simple_html_description.to_s).to be_a String
+        expect(event.description.to_s).to be_a String
+        event.all_properties.each do |property, value|
+          expect(value).to be_a(Time)
+                           .or be_a(Date)
+                           .or be_a(String)
+                           .or be_a(NilClass)
+        end
       end
     end
   end

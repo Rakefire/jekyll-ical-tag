@@ -1,9 +1,6 @@
 # encoding: utf-8
 # frozen_string_literal: true
 
-require "cgi"
-require "api_cache"
-
 module Jekyll
   class IcalTag
     class CalendarFeedCoordinator

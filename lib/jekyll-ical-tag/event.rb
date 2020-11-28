@@ -2,6 +2,7 @@
 # frozen_string_literal: true
 
 require "uri"
+require "active_support"
 
 module Jekyll
   class IcalTag
@@ -27,32 +28,60 @@ module Jekyll
         (?::\d{2,5})?           # Optional port number
         (?:\/[^\s"]*)?          # Anything that is not a space or a double quote
         /x
-      extend Forwardable
 
-      def initialize(event)
-        @event = event
+      def initialize(ical_event)
+        @ical_event = ical_event
+        setup_all_properties!
+        setup_property_accessor_methods!
       end
 
-      def_delegators :event, :dtstart, :dtend
+      attr_reader :all_properties
 
-      def all_properties
-        @props ||= begin
+      def simple_html_description
+        @simple_html_description ||= begin
+          description.clone.tap do |description|
+            description_urls.each do |url|
+              description.gsub! url, %(<a href='#{url}'>#{url}</a>)
+            end
+          end
+        end
+      end
+
+      def attendees
+        ical_event.attendee.map(&:to_s).map { |a| a.slice!("mailto:"); a }
+      end
+
+      def description_urls
+        return [] unless description
+
+        @description_urls ||= description.scan(URL_REGEX).to_a
+      end
+
+      private
+
+      attr_reader :ical_event
+
+      def setup_all_properties!
+        @all_properties ||= begin
           props = {}
 
           # RFC 5545 Properties
-          event.class.properties.each do |property|
-            props[property] = event.property(property)
+          ical_event.class.properties.each do |property|
+            props[property] = ical_event.property(property)
           end
 
           # custom properties
-          props = props.merge(event.custom_properties)
+          props = props.merge(ical_event.custom_properties)
 
+          # Ensure all arrays get flattened to utf8 encoded strings
           # Ensure all event values are utf8 encoded strings
           # Ensure times (from dates)
           # Ensure present
           props.transform_values! do |value|
             new_value =
               case value
+              when Array, Icalendar::Values::Array
+                value.join("\n").force_encoding("UTF-8")
               when String, Icalendar::Values::Text
                 value.force_encoding("UTF-8")
               when Date, Icalendar::Values::DateTime
@@ -70,30 +99,13 @@ module Jekyll
         end
       end
 
-      def simple_html_description
-        @simple_html_description ||= begin
-            description&.clone.tap do |description|
-              description = description.join("\n") if description.is_a?(Icalendar::Values::Array)
-
-              description_urls.each do |url|
-                description.force_encoding("UTF-8").gsub! url, %(<a href='#{url}'>#{url}</a>)
-              end
-            end
+      def setup_property_accessor_methods!
+        all_properties.each do |prop, value|
+          define_singleton_method prop do
+            all_properties[prop]
           end
+        end
       end
-
-      def attendees
-        attendee.map(&:to_s).map { |a| a.slice!("mailto:"); a }
-      end
-
-      def description_urls
-        @description_urls ||= description.to_s.force_encoding("UTF-8").scan(URL_REGEX).to_a
-      end
-
-      private
-
-      def_delegators :event, :description, :attendee
-      attr_reader :event
     end
   end
 end
