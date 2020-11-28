@@ -37,25 +37,46 @@ module Jekyll
 
       def all_properties
         @props ||= begin
-            props = {}
+          props = {}
 
-            # RFC 5545 Properties
-            event.class.properties.each do |property|
-              props[property] = event.property(property)
-            end
-
-            # custom properties
-            props = props.merge(event.custom_properties)
-
-            props
+          # RFC 5545 Properties
+          event.class.properties.each do |property|
+            props[property] = event.property(property)
           end
+
+          # custom properties
+          props = props.merge(event.custom_properties)
+
+          # Ensure all event values are utf8 encoded strings
+          # Ensure times (from dates)
+          # Ensure present
+          props.transform_values! do |value|
+            new_value =
+              case value
+              when String, Icalendar::Values::Text
+                value.force_encoding("UTF-8")
+              when Date, Icalendar::Values::DateTime
+                value.to_time
+              when Icalendar::Values::Uri
+                value.to_s
+              else
+                value
+              end
+
+            new_value.presence
+          end
+
+          props
+        end
       end
 
       def simple_html_description
         @simple_html_description ||= begin
-            description&.clone.tap do |d|
+            description&.clone.tap do |description|
+              description = description.join("\n") if description.is_a?(Icalendar::Values::Array)
+
               description_urls.each do |url|
-                d.force_encoding("UTF-8").gsub! url, %(<a href='#{url}'>#{url}</a>)
+                description.force_encoding("UTF-8").gsub! url, %(<a href='#{url}'>#{url}</a>)
               end
             end
           end

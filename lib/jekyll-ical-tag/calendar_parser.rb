@@ -8,22 +8,19 @@ require "icalendar"
 module Jekyll
   class IcalTag
     class CalendarParser
-      def initialize(url)
-        @url = URI.unescape(url)
+      def initialize(raw_feed)
+        @raw_feed = raw_feed
       end
 
       def events
-        @events ||= begin
-          Icalendar::Event.parse(ics_feed)
-                          .sort { |e1, e2| e1.dtstart <=> e2.dtstart }
-                          .map { |e| Jekyll::IcalTag::Event.new(e) }
-        end
+        @events ||= parsed_feed.sort { |event1, event2| event1.dtstart <=> event2.dtstart }
+                               .map { |event| Jekyll::IcalTag::Event.new(event) }
       end
 
       private
 
-      def ics_feed
-        @ics_feed ||= APICache.get(@url)
+      def parsed_feed
+        Icalendar::Event.parse(@raw_feed)
       end
     end
   end

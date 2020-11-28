@@ -1,0 +1,1310 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Events
+X-WR-TIMEZONE:America/New_York
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20210818
+DTEND;VALUE=DATE:20210819
+DTSTAMP:20201128T024046Z
+UID:5106u72sga2j628cmfib7pipk1@google.com
+CREATED:20201119T160520Z
+DESCRIPTION:
+LAST-MODIFIED:20201119T160520Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Natalie's b-day! 
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20201002T140000Z
+DTEND:20201002T170000Z
+DTSTAMP:20201128T024046Z
+UID:16ctcf0sp28a369treuj5g4vie@google.com
+CREATED:20200909T182505Z
+DESCRIPTION:October is Domestic Violence Awareness Month. Join SAOP at the 
+ library to meet your local advocate and get resources\, and learn more abou
+ t how you can combat domestic violence in our community.
+LAST-MODIFIED:20200909T182505Z
+LOCATION:Herbert Wescoat Memorial\, 120 N Market St\, McArthur\, OH 45651\,
+  USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Advocate Meet & Greet 
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20201006T140000Z
+DTEND:20201006T170000Z
+DTSTAMP:20201128T024046Z
+UID:35rcau1rhajdrg4r0hde5l229s@google.com
+CREATED:20200909T182432Z
+DESCRIPTION:October is Domestic Violence Awareness Month. Join SAOP at the 
+ library to meet your local advocate and get resources\, and learn more abou
+ t how you can combat domestic violence in our community.
+LAST-MODIFIED:20200909T182432Z
+LOCATION:230 E Main St\, Logan\, OH 43138\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Advocate Meet & Greet
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200912T140000Z
+DTEND:20200912T150000Z
+DTSTAMP:20201128T024046Z
+UID:78e534t5siol8a1r16fr3ikvps@google.com
+CREATED:20200908T192051Z
+DESCRIPTION:Join us for a free\, beginner's class to inspire healing throug
+ h deep breathing\, meditation and optional movement. This class is open to 
+ survivors\, their loved ones\, advocates\, caregivers and anyone who has be
+ en affected either directly or indirectly by trauma. \n\nThe only thing you
+  need to bring is something that you can sit on comfortably such as a chair
+ \, towel or yoga mat. \n\nFor questions\, please feel free to contact René 
+ at 740-331-9171 or at rene@saopseoh.org
+LAST-MODIFIED:20200908T192051Z
+LOCATION:Kachelmacher Park\, Logan\, OH 43138\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Breathwork & Meditation for Healing
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200121T210000Z
+DTEND:20200122T010000Z
+DTSTAMP:20201128T024046Z
+UID:734rllnfee2beip6pi1l047gep@google.com
+CREATED:20191028T150317Z
+DESCRIPTION:Interested in learning more about how to support survivors of s
+ exual assault in our community? Join our 40-hour volunteer advocate trainin
+ g! This training will cover:\n\n-Defining sexual violence\n-Anti-Oppression
+ \n-Neurobiology of trauma\n-Good listening skills\n-Hotline Advocacy\n-Sexu
+ al Assault Forensic Exam\n-Crisis intervention skills\n-Legal Advocacy\n-Ra
+ ising awareness\n-Role plays\n-And much more!\n\nOur training also provides
+  sessions from a number of our community partners including My Sister's Pla
+ ce\, The Child Advocacy Center\, the Prosecutor's Office/VWA\, ACBDD\, Deaf
+  World Against Violence Everywhere\, and more!\n\nFor more information\, ch
+ eck out the 'Volunteer' tab on our website\, www.saopseoh.org. There you ca
+ n find volunteer job descriptions\, and our online volunteer application.\n
+ \nFor any other questions or clarifications\, reach out to the Volunteer Co
+ ordinator at heather@saopseoh.org
+LAST-MODIFIED:20191125T164454Z
+LOCATION:77 E State St\, Athens\, OH 45701\, USA
+SEQUENCE:3
+STATUS:CONFIRMED
+SUMMARY:Volunteer Training
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200129T210000Z
+DTEND:20200130T010000Z
+DTSTAMP:20201128T024046Z
+UID:3i5ieaqkkd1iapp07gmgpf4qaq@google.com
+CREATED:20191028T150611Z
+DESCRIPTION:Interested in learning more about how to support survivors of s
+ exual assault in our community? Join our 40-hour volunteer advocate trainin
+ g! This training will cover:\n\n-Defining sexual violence\n-Anti-Oppression
+ \n-Neurobiology of trauma\n-Good listening skills\n-Hotline Advocacy\n-Sexu
+ al Assault Forensic Exam\n-Crisis intervention skills\n-Legal Advocacy\n-Ra
+ ising awareness\n-Role plays\n-And much more!\n\nOur training also provides
+  sessions from a number of our community partners including My Sister's Pla
+ ce\, The Child Advocacy Center\, the Prosecutor's Office/VWA\, ACBDD\, Deaf
+  World Against Violence Everywhere\, and more!\n\nFor more information\, ch
+ eck out the 'Volunteer' tab on our website\, www.saopseoh.org. There you ca
+ n find volunteer job descriptions\, and our online volunteer application.\n
+ \nFor any other questions or clarifications\, reach out to the Volunteer Co
+ ordinator at heather@saopseoh.org
+LAST-MODIFIED:20191028T150611Z
+LOCATION:77 E State St\, Athens\, OH 45701\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Volunteer Training
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200128T210000Z
+DTEND:20200129T010000Z
+DTSTAMP:20201128T024046Z
+UID:7qjf66v54nc4130bjehu3m3avg@google.com
+CREATED:20191028T150545Z
+DESCRIPTION:Interested in learning more about how to support survivors of s
+ exual assault in our community? Join our 40-hour volunteer advocate trainin
+ g! This training will cover:\n\n-Defining sexual violence\n-Anti-Oppression
+ \n-Neurobiology of trauma\n-Good listening skills\n-Hotline Advocacy\n-Sexu
+ al Assault Forensic Exam\n-Crisis intervention skills\n-Legal Advocacy\n-Ra
+ ising awareness\n-Role plays\n-And much more!\n\nOur training also provides
+  sessions from a number of our community partners including My Sister's Pla
+ ce\, The Child Advocacy Center\, the Prosecutor's Office/VWA\, ACBDD\, Deaf
+  World Against Violence Everywhere\, and more!\n\nFor more information\, ch
+ eck out the 'Volunteer' tab on our website\, www.saopseoh.org. There you ca
+ n find volunteer job descriptions\, and our online volunteer application.\n
+ \nFor any other questions or clarifications\, reach out to the Volunteer Co
+ ordinator at heather@saopseoh.org
+LAST-MODIFIED:20191028T150545Z
+LOCATION:77 E State St\, Athens\, OH 45701\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Volunteer Training
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200127T210000Z
+DTEND:20200128T010000Z
+DTSTAMP:20201128T024046Z
+UID:4csgfvuv3nj6o8cr2rectjid4v@google.com
+CREATED:20191028T150520Z
+DESCRIPTION:Interested in learning more about how to support survivors of s
+ exual assault in our community? Join our 40-hour volunteer advocate trainin
+ g! This training will cover:\n\n-Defining sexual violence\n-Anti-Oppression
+ \n-Neurobiology of trauma\n-Good listening skills\n-Hotline Advocacy\n-Sexu
+ al Assault Forensic Exam\n-Crisis intervention skills\n-Legal Advocacy\n-Ra
+ ising awareness\n-Role plays\n-And much more!\n\nOur training also provides
+  sessions from a number of our community partners including My Sister's Pla
+ ce\, The Child Advocacy Center\, the Prosecutor's Office/VWA\, ACBDD\, Deaf
+  World Against Violence Everywhere\, and more!\n\nFor more information\, ch
+ eck out the 'Volunteer' tab on our website\, www.saopseoh.org. There you ca
+ n find volunteer job descriptions\, and our online volunteer application.\n
+ \nFor any other questions or clarifications\, reach out to the Volunteer Co
+ ordinator at heather@saopseoh.org
+LAST-MODIFIED:20191028T150520Z
+LOCATION:77 E State St\, Athens\, OH 45701\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Volunteer Training
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200125T140000Z
+DTEND:20200125T220000Z
+DTSTAMP:20201128T024046Z
+UID:2s2nv88lv9e4b8pcnf5tgo6510@google.com
+CREATED:20191028T150412Z
+DESCRIPTION:Interested in learning more about how to support survivors of s
+ exual assault in our community? Join our 40-hour volunteer advocate trainin
+ g! This training will cover:\n\n-Defining sexual violence\n-Anti-Oppression
+ \n-Neurobiology of trauma\n-Good listening skills\n-Hotline Advocacy\n-Sexu
+ al Assault Forensic Exam\n-Crisis intervention skills\n-Legal Advocacy\n-Ra
+ ising awareness\n-Role plays\n-And much more!\n\nOur training also provides
+  sessions from a number of our community partners including My Sister's Pla
+ ce\, The Child Advocacy Center\, the Prosecutor's Office/VWA\, ACBDD\, Deaf
+  World Against Violence Everywhere\, and more!\n\nFor more information\, ch
+ eck out the 'Volunteer' tab on our website\, www.saopseoh.org. There you ca
+ n find volunteer job descriptions\, and our online volunteer application.\n
+ \nFor any other questions or clarifications\, reach out to the Volunteer Co
+ ordinator at heather@saopseoh.org
+LAST-MODIFIED:20191028T150412Z
+LOCATION:77 E State St\, Athens\, OH 45701\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Volunteer Training
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200122T210000Z
+DTEND:20200123T010000Z
+DTSTAMP:20201128T024046Z
+UID:3e1ia6ainmc36l62vf7fj70c4o@google.com
+CREATED:20191028T150348Z
+DESCRIPTION:Interested in learning more about how to support survivors of s
+ exual assault in our community? Join our 40-hour volunteer advocate trainin
+ g! This training will cover:\n\n-Defining sexual violence\n-Anti-Oppression
+ \n-Neurobiology of trauma\n-Good listening skills\n-Hotline Advocacy\n-Sexu
+ al Assault Forensic Exam\n-Crisis intervention skills\n-Legal Advocacy\n-Ra
+ ising awareness\n-Role plays\n-And much more!\n\nOur training also provides
+  sessions from a number of our community partners including My Sister's Pla
+ ce\, The Child Advocacy Center\, the Prosecutor's Office/VWA\, ACBDD\, Deaf
+  World Against Violence Everywhere\, and more!\n\nFor more information\, ch
+ eck out the 'Volunteer' tab on our website\, www.saopseoh.org. There you ca
+ n find volunteer job descriptions\, and our online volunteer application.\n
+ \nFor any other questions or clarifications\, reach out to the Volunteer Co
+ ordinator at heather@saopseoh.org
+LAST-MODIFIED:20191028T150348Z
+LOCATION:77 E State St\, Athens\, OH 45701\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Volunteer Training
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200120T210000Z
+DTEND:20200121T010000Z
+DTSTAMP:20201128T024046Z
+UID:2kqf5rottnp7kdrg424l28j9ul@google.com
+CREATED:20191028T150252Z
+DESCRIPTION:Interested in learning more about how to support survivors of s
+ exual assault in our community? Join our 40-hour volunteer advocate trainin
+ g! This training will cover:\n\n-Defining sexual violence\n-Anti-Oppression
+ \n-Neurobiology of trauma\n-Good listening skills\n-Hotline Advocacy\n-Sexu
+ al Assault Forensic Exam\n-Crisis intervention skills\n-Legal Advocacy\n-Ra
+ ising awareness\n-Role plays\n-And much more!\n\nOur training also provides
+  sessions from a number of our community partners including My Sister's Pla
+ ce\, The Child Advocacy Center\, the Prosecutor's Office/VWA\, ACBDD\, Deaf
+  World Against Violence Everywhere\, and more!\n\nFor more information\, ch
+ eck out the 'Volunteer' tab on our website\, www.saopseoh.org. There you ca
+ n find volunteer job descriptions\, and our online volunteer application.\n
+ \nFor any other questions or clarifications\, reach out to the Volunteer Co
+ ordinator at heather@saopseoh.org
+LAST-MODIFIED:20191028T150326Z
+LOCATION:77 E State St\, Athens\, OH 45701\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Volunteer Training
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20191015T170000Z
+DTEND:20191015T200000Z
+DTSTAMP:20201128T024046Z
+UID:01gi81bc58gkdonvo96fi7o08b@google.com
+CREATED:20191002T145146Z
+DESCRIPTION:October is Domestic Violence Awareness Month. Join SAOP at the 
+ library to meet your local advocate and get resources\, and learn more abou
+ t how you can combat domestic violence in our community. 
+LAST-MODIFIED:20191007T185151Z
+LOCATION:Coolville Public Library\, 26401 Main St\, Coolville\, OH 45723\, 
+ USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Advocate Meet & Greet
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20191008T160000Z
+DTEND:20191008T190000Z
+DTSTAMP:20201128T024046Z
+UID:45a0ec6rd2ki0vpr2e28uqlpfu@google.com
+CREATED:20191002T145045Z
+DESCRIPTION:October is Domestic Violence Awareness Month. Join SAOP at the 
+ library to meet your local advocate and get resources\, and learn more abou
+ t how you can combat domestic violence in our community. 
+LAST-MODIFIED:20191007T174729Z
+LOCATION:Athens Public Library\, 30 Home St\, Athens\, OH 45701\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Advocate Meet & Greet
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20191029T160000Z
+DTEND:20191029T190000Z
+DTSTAMP:20201128T024046Z
+UID:041jhehmld7a1ie9kh2b4dol4h@google.com
+CREATED:20191002T145409Z
+DESCRIPTION:October is Domestic Violence Awareness Month. Join SAOP at the 
+ library to meet your local advocate and get resources\, and learn more abou
+ t how you can combat domestic violence in our community. 
+LAST-MODIFIED:20191002T150334Z
+LOCATION:The Plains Public Library\, 14 S Plains Rd\, The Plains\, OH 45780
+ \, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Advocate Meet & Greet
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20191024T160000Z
+DTEND:20191024T190000Z
+DTSTAMP:20201128T024046Z
+UID:2mc28nhqlbjtle9ji80pp41nf7@google.com
+CREATED:20191002T145250Z
+DESCRIPTION:October is Domestic Violence Awareness Month. Join SAOP at the 
+ library to meet your local advocate and get resources\, and learn more abou
+ t how you can combat domestic violence in our community. 
+LAST-MODIFIED:20191002T150327Z
+LOCATION:Wells (Albany) Public Library\, 5200 Washington Rd\, Albany\, OH 4
+ 5710\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Advocate Meet & Greet
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20191022T160000Z
+DTEND:20191022T190000Z
+DTSTAMP:20201128T024046Z
+UID:3pfutau4ilcfpq29fordurbsfe@google.com
+CREATED:20191002T145340Z
+DESCRIPTION:October is Domestic Violence Awareness Month. Join SAOP at the 
+ library to meet your local advocate and get resources\, and learn more abou
+ t how you can combat domestic violence in our community. 
+LAST-MODIFIED:20191002T150322Z
+LOCATION:Chauncey Public Library\, 29 Converse St\, Chauncey\, OH 45719\, U
+ SA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Advocate Meet & Greet
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20191017T170000Z
+DTEND:20191017T200000Z
+DTSTAMP:20201128T024046Z
+UID:0m10vmccqr2oi5js45fquuujta@google.com
+CREATED:20191002T145204Z
+DESCRIPTION:October is Domestic Violence Awareness Month. Join SAOP at the 
+ library to meet your local advocate and get resources\, and learn more abou
+ t how you can combat domestic violence in our community. 
+LAST-MODIFIED:20191002T150315Z
+LOCATION:Glouster Public Library\, 20 Toledo St\, Glouster\, OH 45732\, USA
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Advocate Meet & Greet
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20191010T160000Z
+DTEND:20191010T190000Z
+DTSTAMP:20201128T024046Z
+UID:3loje9olmaavk1ce141i7c6l3s@google.com
+CREATED:20191002T145113Z
+DESCRIPTION:October is Domestic Violence Awareness Month. Join SAOP at the 
+ library to meet your local advocate and get resources\, and learn more abou
+ t how you can combat domestic violence in our community. 
+LAST-MODIFIED:20191002T150259Z
+LOCATION:Nelsonville Public Library\, 95 W Washington St\, Nelsonville\, OH
+  45764\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Advocate Meet & Greet
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190921T130000Z
+DTEND:20190921T210000Z
+DTSTAMP:20201128T024046Z
+UID:4sc2sjqk3iqhhkfnhcqs3q08om@google.com
+CREATED:20190621T184431Z
+DESCRIPTION:Interested in learning more about how to support survivors of s
+ exual assault in our community? Join our 40-hour volunteer advocate trainin
+ g! This training will cover:\n\n-Defining sexual violence\n-Anti-Oppression
+ \n-Neurobiology of trauma\n-Good listening skills\n-Hotline Advocacy\n-Sexu
+ al Assault Forensic Exam\n-Crisis intervention skills\n-Legal Advocacy\n-Ra
+ ising awareness\n-Role plays\n-And much more!\n\nOur training also provides
+  sessions from a number of our community partners including My Sister's Pla
+ ce\, The Child Advocacy Center\, the Prosecutor's Office/VWA\, ACBDD\, Deaf
+  World Against Violence Everywhere\, and more!\n\nFor more information\, ch
+ eck out the 'Volunteer' tab on our website\, www.saopseoh.org. There you ca
+ n find volunteer job descriptions\, and our online volunteer application.\n
+ \nFor any other questions or clarifications\, reach out to the Volunteer Co
+ ordinator at heather@saopseoh.org\nOrganizer: Events
+LAST-MODIFIED:20190920T121013Z
+LOCATION:77 E State St\, Athens\, OH 45701\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Volunteer Training
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190718T210000Z
+DTEND:20190719T000000Z
+DTSTAMP:20201128T024046Z
+UID:04e064ugm0h305740jf05lhk7e@google.com
+CREATED:20190717T203806Z
+DESCRIPTION:
+LAST-MODIFIED:20190717T203806Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Girls Night Out Pomeroy\, Ohio
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190917T200000Z
+DTEND:20190918T000000Z
+DTSTAMP:20201128T024046Z
+UID:0rtd2r98sih4si6f6ag5ufr8vd@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Events
+ ;X-NUM-GUESTS=0:mailto:saopseoh.org_9imm528s880gagd5gap7mbsj20@group.calend
+ ar.google.com
+CREATED:20190621T183355Z
+DESCRIPTION:Interested in learning more about how to support survivors of s
+ exual assault in our community? Join our 40-hour volunteer advocate trainin
+ g! This training will cover:\n\n-Defining sexual violence\n-Anti-Oppression
+ \n-Neurobiology of trauma\n-Good listening skills\n-Hotline Advocacy\n-Sexu
+ al Assault Forensic Exam\n-Crisis intervention skills\n-Legal Advocacy\n-Ra
+ ising awareness\n-Role plays\n-And much more!\n\nOur training also provides
+  sessions from a number of our community partners including My Sister's Pla
+ ce\, The Child Advocacy Center\, the Prosecutor's Office/VWA\, ACBDD\, Deaf
+  World Against Violence Everywhere\, and more!\n\nFor more information\, ch
+ eck out the 'Volunteer' tab on our website\, www.saopseoh.org. There you ca
+ n find volunteer job descriptions\, and our online volunteer application.\n
+ \nFor any other questions or clarifications\, reach out to the Volunteer Co
+ ordinator at heather@saopseoh.org\nOrganizer: Events
+LAST-MODIFIED:20190624T140738Z
+LOCATION:77 E State St\, Athens\, OH 45701\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Volunteer Training
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190925T200000Z
+DTEND:20190926T000000Z
+DTSTAMP:20201128T024046Z
+UID:2h00v7b7pi8edb4qca75u5g6cf@google.com
+CREATED:20190621T184541Z
+DESCRIPTION:Interested in learning more about how to support survivors of s
+ exual assault in our community? Join our 40-hour volunteer advocate trainin
+ g! This training will cover:\n\n-Defining sexual violence\n-Anti-Oppression
+ \n-Neurobiology of trauma\n-Good listening skills\n-Hotline Advocacy\n-Sexu
+ al Assault Forensic Exam\n-Crisis intervention skills\n-Legal Advocacy\n-Ra
+ ising awareness\n-Role plays\n-And much more!\n\nOur training also provides
+  sessions from a number of our community partners including My Sister's Pla
+ ce\, The Child Advocacy Center\, the Prosecutor's Office/VWA\, ACBDD\, Deaf
+  World Against Violence Everywhere\, and more!\n\nFor more information\, ch
+ eck out the 'Volunteer' tab on our website\, www.saopseoh.org. There you ca
+ n find volunteer job descriptions\, and our online volunteer application.\n
+ \nFor any other questions or clarifications\, reach out to the Volunteer Co
+ ordinator at heather@saopseoh.org\nOrganizer: Events
+LAST-MODIFIED:20190621T184541Z
+LOCATION:77 E State St\, Athens\, OH 45701\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Volunteer Training
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190924T200000Z
+DTEND:20190925T000000Z
+DTSTAMP:20201128T024046Z
+UID:6eb6oqls717v468b8i9d8shrv4@google.com
+CREATED:20190621T184518Z
+DESCRIPTION:Interested in learning more about how to support survivors of s
+ exual assault in our community? Join our 40-hour volunteer advocate trainin
+ g! This training will cover:\n\n-Defining sexual violence\n-Anti-Oppression
+ \n-Neurobiology of trauma\n-Good listening skills\n-Hotline Advocacy\n-Sexu
+ al Assault Forensic Exam\n-Crisis intervention skills\n-Legal Advocacy\n-Ra
+ ising awareness\n-Role plays\n-And much more!\n\nOur training also provides
+  sessions from a number of our community partners including My Sister's Pla
+ ce\, The Child Advocacy Center\, the Prosecutor's Office/VWA\, ACBDD\, Deaf
+  World Against Violence Everywhere\, and more!\n\nFor more information\, ch
+ eck out the 'Volunteer' tab on our website\, www.saopseoh.org. There you ca
+ n find volunteer job descriptions\, and our online volunteer application.\n
+ \nFor any other questions or clarifications\, reach out to the Volunteer Co
+ ordinator at heather@saopseoh.org\nOrganizer: Events
+LAST-MODIFIED:20190621T184518Z
+LOCATION:77 E State St\, Athens\, OH 45701\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Volunteer Training
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190923T200000Z
+DTEND:20190924T000000Z
+DTSTAMP:20201128T024046Z
+UID:5uq8v4o2b3fqdauv0dfcg6cthj@google.com
+CREATED:20190621T184457Z
+DESCRIPTION:Interested in learning more about how to support survivors of s
+ exual assault in our community? Join our 40-hour volunteer advocate trainin
+ g! This training will cover:\n\n-Defining sexual violence\n-Anti-Oppression
+ \n-Neurobiology of trauma\n-Good listening skills\n-Hotline Advocacy\n-Sexu
+ al Assault Forensic Exam\n-Crisis intervention skills\n-Legal Advocacy\n-Ra
+ ising awareness\n-Role plays\n-And much more!\n\nOur training also provides
+  sessions from a number of our community partners including My Sister's Pla
+ ce\, The Child Advocacy Center\, the Prosecutor's Office/VWA\, ACBDD\, Deaf
+  World Against Violence Everywhere\, and more!\n\nFor more information\, ch
+ eck out the 'Volunteer' tab on our website\, www.saopseoh.org. There you ca
+ n find volunteer job descriptions\, and our online volunteer application.\n
+ \nFor any other questions or clarifications\, reach out to the Volunteer Co
+ ordinator at heather@saopseoh.org\nOrganizer: Events
+LAST-MODIFIED:20190621T184457Z
+LOCATION:77 E State St\, Athens\, OH 45701\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Volunteer Training
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190918T200000Z
+DTEND:20190919T000000Z
+DTSTAMP:20201128T024046Z
+UID:6fmhp6qbpmsfa2kv83in20fvgt@google.com
+CREATED:20190621T184339Z
+DESCRIPTION:Interested in learning more about how to support survivors of s
+ exual assault in our community? Join our 40-hour volunteer advocate trainin
+ g! This training will cover:\n\n-Defining sexual violence\n-Anti-Oppression
+ \n-Neurobiology of trauma\n-Good listening skills\n-Hotline Advocacy\n-Sexu
+ al Assault Forensic Exam\n-Crisis intervention skills\n-Legal Advocacy\n-Ra
+ ising awareness\n-Role plays\n-And much more!\n\nOur training also provides
+  sessions from a number of our community partners including My Sister's Pla
+ ce\, The Child Advocacy Center\, the Prosecutor's Office/VWA\, ACBDD\, Deaf
+  World Against Violence Everywhere\, and more!\n\nFor more information\, ch
+ eck out the 'Volunteer' tab on our website\, www.saopseoh.org. There you ca
+ n find volunteer job descriptions\, and our online volunteer application.\n
+ \nFor any other questions or clarifications\, reach out to the Volunteer Co
+ ordinator at heather@saopseoh.org\nOrganizer: Events
+LAST-MODIFIED:20190621T184339Z
+LOCATION:77 E State St\, Athens\, OH 45701\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Volunteer Training
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190916T200000Z
+DTEND:20190917T000000Z
+DTSTAMP:20201128T024046Z
+UID:366emnhhdoifc93gn9d0u7maf7@google.com
+CREATED:20190621T184242Z
+DESCRIPTION:Interested in learning more about how to support survivors of s
+ exual assault in our community? Join our 40-hour volunteer advocate trainin
+ g! This training will cover:\n\n-Defining sexual violence\n-Anti-Oppression
+ \n-Neurobiology of trauma\n-Good listening skills\n-Hotline Advocacy\n-Sexu
+ al Assault Forensic Exam\n-Crisis intervention skills\n-Legal Advocacy\n-Ra
+ ising awareness\n-Role plays\n-And much more!\n\nOur training also provides
+  sessions from a number of our community partners including My Sister's Pla
+ ce\, The Child Advocacy Center\, the Prosecutor's Office/VWA\, ACBDD\, Deaf
+  World Against Violence Everywhere\, and more!\n\nFor more information\, ch
+ eck out the 'Volunteer' tab on our website\, www.saopseoh.org. There you ca
+ n find volunteer job descriptions\, and our online volunteer application.\n
+ \nFor any other questions or clarifications\, reach out to the Volunteer Co
+ ordinator at heather@saopseoh.org\nOrganizer: Events
+LAST-MODIFIED:20190621T184242Z
+LOCATION:77 E State St\, Athens\, OH 45701\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Volunteer Training
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190810T140000Z
+DTEND:20190810T180000Z
+DTSTAMP:20201128T024046Z
+UID:5i8rho1fd6g0098gmfc8d0dun9@google.com
+CREATED:20190611T153346Z
+DESCRIPTION:
+LAST-MODIFIED:20190611T153346Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Vinton County Health Fair 
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190720T140000Z
+DTEND:20190720T180000Z
+DTSTAMP:20201128T024046Z
+UID:14iom229jmt1iei6rvt8gicqhv@google.com
+CREATED:20190611T152927Z
+DESCRIPTION:
+LAST-MODIFIED:20190611T152927Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Safe Kids\, Healthy Kids Meigs County Fairground
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190620T210000Z
+DTEND:20190621T000000Z
+DTSTAMP:20201128T024046Z
+UID:7ncf2sabd57uh4p1rb270eh313@google.com
+CREATED:20190611T152716Z
+DESCRIPTION:
+LAST-MODIFIED:20190611T152716Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Girls Night Out in Pomeroy
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190608T150000Z
+DTEND:20190608T163000Z
+DTSTAMP:20201128T024046Z
+UID:6rocrstagabmreq851r4bb33no@google.com
+CREATED:20190605T203144Z
+DESCRIPTION:
+LAST-MODIFIED:20190605T203144Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Athens Pride Parade
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190423T193000Z
+DTEND:20190423T213000Z
+DTSTAMP:20201128T024046Z
+UID:7eah5voqq5ms1q1i375qovcj0q@google.com
+CREATED:20190320T184729Z
+DESCRIPTION:
+LAST-MODIFIED:20190423T144459Z
+LOCATION:Nelsonville Public Library\, 95 W Washington St\, Nelsonville\, OH
+  45764\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Consent at the Library
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190417T220000Z
+DTEND:20190418T020000Z
+DTSTAMP:20201128T024046Z
+UID:7q3mqg9qqsq7is5o22vrbi1jkk@google.com
+CREATED:20190325T194859Z
+DESCRIPTION:Join SAOP at the Eclipse Company Store for a night of fun and f
+ ood. $1 from every pint will be donated to SAOP. 
+LAST-MODIFIED:20190417T222954Z
+LOCATION:11309 Jackson Dr\, The Plains\, OH 45780
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Eclipse Company Store Fundraiser
+TRANSP:OPAQUE
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-MAPKIT-HANDLE=CAESwQEaEgnyIOK
+ Lm65DQBGY3ZOHhYdUwCJdCg1Vbml0ZWQgU3RhdGVzEgJVUxoET2hpbyICT0gqBkF0aGVuczIKVG
+ hlIFBsYWluczoFNDU3ODBSCkphY2tzb24gRHJaBTExMzA5YhAxMTMwOSBKYWNrc29uIERyKhAxM
+ TMwOSBKYWNrc29uIERyMhAxMTMwOSBKYWNrc29uIERyMhVUaGUgUGxhaW5zLCBPSCAgNDU3ODAy
+ DVVuaXRlZCBTdGF0ZXM4OUAA;X-APPLE-RADIUS=70.58732219315583;X-APPLE-REFERENCE
+ FRAME=1;X-TITLE="11309 Jackson Dr, The Plains, OH 45780":geo:39.364122,-82.
+ 117525
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190416T193000Z
+DTEND:20190416T213000Z
+DTSTAMP:20201128T024046Z
+UID:43p2mhed77obeosn7kop8k5tss@google.com
+CREATED:20190410T142756Z
+DESCRIPTION:
+LAST-MODIFIED:20190410T142756Z
+LOCATION:Glouster Public Library\, 20 Toledo St\, Glouster\, OH 45732\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Consent at the Library
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190504T140000Z
+DTEND:20190504T153000Z
+DTSTAMP:20201128T024046Z
+UID:1rgokjh49j7mkrfffmt9dnhq27@google.com
+CREATED:20190408T183219Z
+DESCRIPTION:Miss Penny travels & shares her story and is working\ndiligentl
+ y to educate families & community leaders.\n\nA family guide will be presen
+ ted for standing strong\nagainst human trafficking. Come learn her story & 
+ learn\nthe facts. Receive Free literature !\n\nA FREE lunch will be provide
+ d!
+LAST-MODIFIED:20190408T183219Z
+LOCATION:Mulberry Community Center\, 260 Mulberry Ave\, Pomeroy\, OH 45769\
+ , USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Human Trafficking Education & Prevention for Meigs Co. Residents
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190410T230000Z
+DTEND:20190411T010000Z
+DTSTAMP:20201128T024046Z
+UID:0gtmjd8jfmsle9ksgiip7ih7qv@google.com
+CREATED:20190404T162401Z
+DESCRIPTION:Join Pork & Pickles at Devil's Kettle for a night of great beer
+ \, burgers\, and bingo. Four rounds of bingo with prizes. $2 suggested dona
+ tion for each bingo card to benefit the Survivor Advocacy Outreach Program.
+LAST-MODIFIED:20190404T162408Z
+LOCATION:Devil's Kettle Brewing\, 97 Columbus Rd\, Athens\, OH 45701\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Beer\, Burgers\, and Bingo Fundraiser
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190403T220000Z
+DTEND:20190404T020000Z
+DTSTAMP:20201128T024046Z
+UID:1ccgq7japlgq0o8aqp0ek0h6p4@google.com
+CREATED:20190326T132641Z
+DESCRIPTION:Join SAOP at Little Fish Brewing Co. to kick off Sexual Assault
+  Awareness Month and keg tapping of the "Consent" special brew. $2 from eac
+ h pint of Consent sold will be donated to SAOP.
+LAST-MODIFIED:20190403T211022Z
+LOCATION:Little Fish Brewing Co.\, 8675 Armitage Rd\, Athens\, OH 45701\, U
+ SA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:"Consent" Keg Tapping and SAAM Kick Off Event
+TRANSP:OPAQUE
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR;ACKNOWLEDGED=20190403T211018Z:AUTOMATIC
+BEGIN:VALARM
+ACTION:NONE
+TRIGGER;VALUE=DATE-TIME:19760401T005545Z
+X-WR-ALARMUID:E7452B75-B83E-4C20-853A-C5DD7F826C5B
+UID:E7452B75-B83E-4C20-853A-C5DD7F826C5B
+ACKNOWLEDGED:20190403T211018Z
+X-APPLE-DEFAULT-ALARM:TRUE
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190430T193000Z
+DTEND:20190430T213000Z
+DTSTAMP:20201128T024046Z
+UID:0npd8d8bq4v819qsr5mlha9ga8@google.com
+CREATED:20190320T184925Z
+DESCRIPTION:
+LAST-MODIFIED:20190320T184925Z
+LOCATION:The Plains Public Library\, 14 S Plains Rd\, The Plains\, OH 45780
+ \, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Consent at the Library
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190424T193000Z
+DTEND:20190424T213000Z
+DTSTAMP:20201128T024046Z
+UID:5ggbm8d8t9j4u2cdrom233jv2l@google.com
+CREATED:20190320T184837Z
+DESCRIPTION:
+LAST-MODIFIED:20190320T184844Z
+LOCATION:Chauncey Public Library\, 29 Converse St\, Chauncey\, OH 45719\, U
+ SA
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Consent at the Library
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190417T193000Z
+DTEND:20190417T213000Z
+DTSTAMP:20201128T024046Z
+UID:5pi1hjb78l77psuilseas8stra@google.com
+CREATED:20190320T184655Z
+DESCRIPTION:
+LAST-MODIFIED:20190320T184655Z
+LOCATION:Coolville Public Library\, 26401 Main St\, Coolville\, OH 45723\, 
+ USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Consent at the Library
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190410T193000Z
+DTEND:20190410T213000Z
+DTSTAMP:20201128T024046Z
+UID:28lv13naegd1run4c13tvmktfd@google.com
+CREATED:20190320T184626Z
+DESCRIPTION:
+LAST-MODIFIED:20190320T184626Z
+LOCATION:Wells (Albany) Public Library\, 9400\, 5200 Washington Rd\, Albany
+ \, OH 45710\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Consent at the Library
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190409T193000Z
+DTEND:20190409T213000Z
+DTSTAMP:20201128T024046Z
+UID:329rj058t8ainlesa1crenqamn@google.com
+CREATED:20190320T184601Z
+DESCRIPTION:
+LAST-MODIFIED:20190320T184601Z
+LOCATION:Athens Public Library\, 30 Home St\, Athens\, OH 45701\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Consent at the Library
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190402T193000Z
+DTEND:20190402T213000Z
+DTSTAMP:20201128T024046Z
+UID:6v7tl6hpiuru5pdffcu68266rb@google.com
+CREATED:20190320T184504Z
+DESCRIPTION:
+LAST-MODIFIED:20190320T184504Z
+LOCATION:Glouster Public Library\, 20 Toledo St\, Glouster\, OH 45732\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Consent at the Library
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190420T120000Z
+DTEND:20190420T150000Z
+DTSTAMP:20201128T024046Z
+UID:3l7qa5tg3ii9frrt181a4bc3sr@google.com
+CREATED:20190318T201242Z
+DESCRIPTION:Come support  Survivor Advocacy Outreach Program at the Turn At
+ hens Teal Waffle Bar Fundraiser! Eat as many yummy Hampton waffles as you w
+ ant for only $5. All proceeds go to SAOP for Sexual Assault Awareness Month
+ !
+LAST-MODIFIED:20190320T124253Z
+LOCATION:Hampton Inn Athens\, 986 E State St\, Athens\, OH 45701\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Hampton Inn Waffle Bar Fundraiser
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190522T200000Z
+DTEND:20190523T000000Z
+DTSTAMP:20201128T024046Z
+UID:50t7fb64qnnsf2nhnaah2iqcfm@google.com
+CREATED:20190320T124125Z
+DESCRIPTION:Interested in learning more about how to support survivors of s
+ exual assault in our community? Join our 40-hour volunteer advocate trainin
+ g! This training will cover:\n\n-Defining sexual violence\n-Anti-Oppression
+ \n-Neurobiology of trauma\n-Good listening skills\n-Hotline Advocacy\n-Sexu
+ al Assault Forensic Exam\n-Crisis intervention skills\n-Legal Advocacy\n-Ra
+ ising awareness\n-Role plays\n-And much more!\n\nOur training also provides
+  sessions from a number of our community partners including My Sister's Pla
+ ce\, The Child Advocacy Center\, the Prosecutor's Office/VWA\, ACBDD\, Deaf
+  World Against Violence Everywhere\, and more!\n\nFor more information\, ch
+ eck out the 'Volunteer' tab on our website\, www.saopseoh.org. There you ca
+ n find volunteer job descriptions\, and our online volunteer application.\n
+ \nFor any other questions or clarifications\, reach out to the Volunteer Co
+ ordinator at heather@saopseoh.org
+LAST-MODIFIED:20190320T124125Z
+LOCATION:77 E State St\, Athens\, OH 45701\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Volunteer Training - Day 7
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190521T200000Z
+DTEND:20190522T000000Z
+DTSTAMP:20201128T024046Z
+UID:2g3f8umbsqvhv838rbt91aa8hb@google.com
+CREATED:20190320T124110Z
+DESCRIPTION:Interested in learning more about how to support survivors of s
+ exual assault in our community? Join our 40-hour volunteer advocate trainin
+ g! This training will cover:\n\n-Defining sexual violence\n-Anti-Oppression
+ \n-Neurobiology of trauma\n-Good listening skills\n-Hotline Advocacy\n-Sexu
+ al Assault Forensic Exam\n-Crisis intervention skills\n-Legal Advocacy\n-Ra
+ ising awareness\n-Role plays\n-And much more!\n\nOur training also provides
+  sessions from a number of our community partners including My Sister's Pla
+ ce\, The Child Advocacy Center\, the Prosecutor's Office/VWA\, ACBDD\, Deaf
+  World Against Violence Everywhere\, and more!\n\nFor more information\, ch
+ eck out the 'Volunteer' tab on our website\, www.saopseoh.org. There you ca
+ n find volunteer job descriptions\, and our online volunteer application.\n
+ \nFor any other questions or clarifications\, reach out to the Volunteer Co
+ ordinator at heather@saopseoh.org
+LAST-MODIFIED:20190320T124110Z
+LOCATION:77 E State St\, Athens\, OH 45701\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Volunteer Training - Day 6
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190520T200000Z
+DTEND:20190521T000000Z
+DTSTAMP:20201128T024046Z
+UID:29tpgauk3vqcu190i635fkmdsr@google.com
+CREATED:20190320T124055Z
+DESCRIPTION:Interested in learning more about how to support survivors of s
+ exual assault in our community? Join our 40-hour volunteer advocate trainin
+ g! This training will cover:\n\n-Defining sexual violence\n-Anti-Oppression
+ \n-Neurobiology of trauma\n-Good listening skills\n-Hotline Advocacy\n-Sexu
+ al Assault Forensic Exam\n-Crisis intervention skills\n-Legal Advocacy\n-Ra
+ ising awareness\n-Role plays\n-And much more!\n\nOur training also provides
+  sessions from a number of our community partners including My Sister's Pla
+ ce\, The Child Advocacy Center\, the Prosecutor's Office/VWA\, ACBDD\, Deaf
+  World Against Violence Everywhere\, and more!\n\nFor more information\, ch
+ eck out the 'Volunteer' tab on our website\, www.saopseoh.org. There you ca
+ n find volunteer job descriptions\, and our online volunteer application.\n
+ \nFor any other questions or clarifications\, reach out to the Volunteer Co
+ ordinator at heather@saopseoh.org
+LAST-MODIFIED:20190320T124055Z
+LOCATION:77 E State St\, Athens\, OH 45701\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Volunteer Training - Day 5
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190518T130000Z
+DTEND:20190518T210000Z
+DTSTAMP:20201128T024046Z
+UID:534lj7j69vr5diuh3kr7ipiklo@google.com
+CREATED:20190320T124037Z
+DESCRIPTION:Interested in learning more about how to support survivors of s
+ exual assault in our community? Join our 40-hour volunteer advocate trainin
+ g! This training will cover:\n\n-Defining sexual violence\n-Anti-Oppression
+ \n-Neurobiology of trauma\n-Good listening skills\n-Hotline Advocacy\n-Sexu
+ al Assault Forensic Exam\n-Crisis intervention skills\n-Legal Advocacy\n-Ra
+ ising awareness\n-Role plays\n-And much more!\n\nOur training also provides
+  sessions from a number of our community partners including My Sister's Pla
+ ce\, The Child Advocacy Center\, the Prosecutor's Office/VWA\, ACBDD\, Deaf
+  World Against Violence Everywhere\, and more!\n\nFor more information\, ch
+ eck out the 'Volunteer' tab on our website\, www.saopseoh.org. There you ca
+ n find volunteer job descriptions\, and our online volunteer application.\n
+ \nFor any other questions or clarifications\, reach out to the Volunteer Co
+ ordinator at heather@saopseoh.org
+LAST-MODIFIED:20190320T124037Z
+LOCATION:77 E State St\, Athens\, OH 45701\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Volunteer Training - Day 4
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190515T200000Z
+DTEND:20190516T000000Z
+DTSTAMP:20201128T024046Z
+UID:619vdk7v5iq0crah880kvhalu6@google.com
+CREATED:20190320T124019Z
+DESCRIPTION:Interested in learning more about how to support survivors of s
+ exual assault in our community? Join our 40-hour volunteer advocate trainin
+ g! This training will cover:\n\n-Defining sexual violence\n-Anti-Oppression
+ \n-Neurobiology of trauma\n-Good listening skills\n-Hotline Advocacy\n-Sexu
+ al Assault Forensic Exam\n-Crisis intervention skills\n-Legal Advocacy\n-Ra
+ ising awareness\n-Role plays\n-And much more!\n\nOur training also provides
+  sessions from a number of our community partners including My Sister's Pla
+ ce\, The Child Advocacy Center\, the Prosecutor's Office/VWA\, ACBDD\, Deaf
+  World Against Violence Everywhere\, and more!\n\nFor more information\, ch
+ eck out the 'Volunteer' tab on our website\, www.saopseoh.org. There you ca
+ n find volunteer job descriptions\, and our online volunteer application.\n
+ \nFor any other questions or clarifications\, reach out to the Volunteer Co
+ ordinator at heather@saopseoh.org
+LAST-MODIFIED:20190320T124019Z
+LOCATION:77 E State St\, Athens\, OH 45701\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Volunteer Training - Day 3
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190514T200000Z
+DTEND:20190515T000000Z
+DTSTAMP:20201128T024046Z
+UID:79e9ppj71c6h0rrar6l6d279sl@google.com
+CREATED:20190320T124002Z
+DESCRIPTION:Interested in learning more about how to support survivors of s
+ exual assault in our community? Join our 40-hour volunteer advocate trainin
+ g! This training will cover:\n\n-Defining sexual violence\n-Anti-Oppression
+ \n-Neurobiology of trauma\n-Good listening skills\n-Hotline Advocacy\n-Sexu
+ al Assault Forensic Exam\n-Crisis intervention skills\n-Legal Advocacy\n-Ra
+ ising awareness\n-Role plays\n-And much more!\n\nOur training also provides
+  sessions from a number of our community partners including My Sister's Pla
+ ce\, The Child Advocacy Center\, the Prosecutor's Office/VWA\, ACBDD\, Deaf
+  World Against Violence Everywhere\, and more!\n\nFor more information\, ch
+ eck out the 'Volunteer' tab on our website\, www.saopseoh.org. There you ca
+ n find volunteer job descriptions\, and our online volunteer application.\n
+ \nFor any other questions or clarifications\, reach out to the Volunteer Co
+ ordinator at heather@saopseoh.org
+LAST-MODIFIED:20190320T124002Z
+LOCATION:77 E State St\, Athens\, OH 45701\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Volunteer Training - Day 2
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190513T200000Z
+DTEND:20190514T000000Z
+DTSTAMP:20201128T024046Z
+UID:0f9rgcg8gsmqinlum9qrgiognu@google.com
+CREATED:20190319T145959Z
+DESCRIPTION:\nInterested in learning more about how to support survivors of
+  sexual assault in our community? Join our 40-hour volunteer advocate train
+ ing! This training will cover:\n\n-Defining sexual violence\n-Anti-Oppressi
+ on\n-Neurobiology of trauma\n-Good listening skills\n-Hotline Advocacy\n-Se
+ xual Assault Forensic Exam\n-Crisis intervention skills\n-Legal Advocacy\n-
+ Raising awareness\n-Role plays\n-And much more!\n\nOur training also provid
+ es sessions from a number of our community partners including My Sister's P
+ lace\, The Child Advocacy Center\, the Prosecutor's Office/VWA\, ACBDD\, De
+ af World Against Violence Everywhere\, and more!\n\nFor more information\, 
+ check out the 'Volunteer' tab on our website\, www.saopseoh.org. There you 
+ can find volunteer job descriptions\, and our online volunteer application.
+ \n\nFor any other questions or clarifications\, reach out to the Volunteer 
+ Coordinator at heather@saopseoh.org
+LAST-MODIFIED:20190320T123942Z
+LOCATION:77 E State St\, Athens\, OH 45701\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Volunteer Training - Day 1
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190323T220000Z
+DTEND:20190324T000000Z
+DTSTAMP:20201128T024046Z
+UID:4rhnhe11crjkkk7aokrdfu1f3b@google.com
+CREATED:20190301T151624Z
+DESCRIPTION:An evening of spoken word\, fine art and celebration while rais
+ ing funds for Survivor Advocacy Outreach Program!\n\nMULTICULTURAL CENTER A
+ RT GALLERY AND BAKER THEATER\, OHIO UNIVERSITY\n\nFine Art  •  Spoken Word 
+  •  WOAP Appalachian Advocate Award\n\nSpecial Guest: OHIO President Duane 
+ Nellis\nSpecial Musical Guests: The Trophy Wives\n\nDecor provided by Passi
+ on Works Studio\n\nFree admission\, donations accepted for Survivor Advocac
+ y Outreach Program\n\nhttps://www.facebook.com/events/764255967272423/\n\nA
+ SL interpreting will be provided. Please contact  Winsome Chunnu\, chunnu@o
+ hio.edu by March 5\, 2019\, if you need an accommodation to attend this eve
+ nt.
+LAST-MODIFIED:20190301T192256Z
+LOCATION:Multicultural Center Art Gallery at Ohio University
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Women of Appalachia Gala
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190404T220000Z
+DTEND:20190405T000000Z
+DTSTAMP:20201128T024046Z
+UID:5f0clbegv36fhh4f5rghg3s7pn@google.com
+CREATED:20190301T152240Z
+DESCRIPTION:Take Back the Night is sponsored by Student Senate\, Women's Ce
+ nter\, Survivor Advocacy Program\, Campus Involvement Center\, My Sister's 
+ Place\, Counseling and Psychological Services\, Graduate Student Senate\, H
+ ousing and Residence Life\, and the Survivor Advocacy Outreach Program.\n\n
+ Take Back the Night is an annual event to take back the night from sexual a
+ nd domestic violence. Everyone\, regardless of gender identity\, is encoura
+ ged to participate in these series of events that focus on survivor experie
+ nces.\n\nhttps://www.ohio.edu/womens-center/take-back-night
+LAST-MODIFIED:20190301T192214Z
+LOCATION:John Calhoun Baker University Center\, 1 Park Pl\, Athens\, OH 457
+ 01\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Take Back the Night @ Ohio University
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190403T120000Z
+DTEND:20190403T180000Z
+DTSTAMP:20201128T024046Z
+UID:0n656tcdhma6r4t2oap5kpl39q@google.com
+CREATED:20190301T152312Z
+DESCRIPTION:
+LAST-MODIFIED:20190301T184210Z
+LOCATION:Farmers Bank and Savings Company\, 640 E Main St\, Pomeroy\, OH 45
+ 769\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Farmers Bank SAOP Bake Sale Fundraiser
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190205T203000Z
+DTEND:20190205T223000Z
+DTSTAMP:20201128T024046Z
+UID:3rvaqgtq2pmdngca5s7f5dc7ju@google.com
+CREATED:20190201T165321Z
+DESCRIPTION:Join SAOP for snacks\, games\, and to learn more about healthy 
+ relationships!
+LAST-MODIFIED:20190205T195412Z
+LOCATION:Nelsonville Public Library\, 95 W Washington St\, Nelsonville\, OH
+  45764\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Teen Dating Violence Awareness Event
+TRANSP:OPAQUE
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR;ACKNOWLEDGED=20190205T195410Z:AUTOMATIC
+BEGIN:VALARM
+ACTION:NONE
+TRIGGER;VALUE=DATE-TIME:19760401T005545Z
+X-WR-ALARMUID:42D24E89-F34C-483D-94DC-79D9797CBC03
+UID:42D24E89-F34C-483D-94DC-79D9797CBC03
+ACKNOWLEDGED:20190205T195410Z
+X-APPLE-DEFAULT-ALARM:TRUE
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190226T203000Z
+DTEND:20190226T223000Z
+DTSTAMP:20201128T024046Z
+UID:1pgtijph1ua00nomlpinjaoqni@google.com
+CREATED:20190204T161127Z
+DESCRIPTION:Join SAOP for snacks\, games\, and to learn more about healthy 
+ relationships!
+LAST-MODIFIED:20190204T161127Z
+LOCATION:The Plains Public Library\, 14 S Plains Rd\, The Plains\, OH 45780
+ \, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Teen Dating Violence Awareness Event
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190220T203000Z
+DTEND:20190220T223000Z
+DTSTAMP:20201128T024046Z
+UID:1p76g2anku2okgpd0937r7hs8g@google.com
+CREATED:20190204T161058Z
+DESCRIPTION:Join SAOP for snacks\, games\, and to learn more about healthy 
+ relationships!
+LAST-MODIFIED:20190204T161058Z
+LOCATION:Chauncey Public Library\, 29 Converse St\, Chauncey\, OH 45719\, U
+ SA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Teen Dating Violence Awareness Event
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190219T203000Z
+DTEND:20190219T223000Z
+DTSTAMP:20201128T024046Z
+UID:4ufol3vlnduqrlm6664e9hkdk8@google.com
+CREATED:20190204T161035Z
+DESCRIPTION:Join SAOP for snacks\, games\, and to learn more about healthy 
+ relationships!
+LAST-MODIFIED:20190204T161036Z
+LOCATION:Glouster Public Library\, 20 Toledo St\, Glouster\, OH 45732\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Teen Dating Violence Awareness Event
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190213T203000Z
+DTEND:20190213T223000Z
+DTSTAMP:20201128T024046Z
+UID:7pnpam3r35us4o3s3jebksk808@google.com
+CREATED:20190204T161003Z
+DESCRIPTION:Join SAOP for snacks\, games\, and to learn more about healthy 
+ relationships!
+LAST-MODIFIED:20190204T161003Z
+LOCATION:Wells (Albany) Public Library\, 9400\, 5200 Washington Rd\, Albany
+ \, OH 45710\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Teen Dating Violence Awareness Event
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190212T220000Z
+DTEND:20190213T000000Z
+DTSTAMP:20201128T024046Z
+UID:5b4uu7ptn2ikqdrremtqb7me06@google.com
+CREATED:20190204T160917Z
+DESCRIPTION:Join SAOP for snacks\, games\, and to learn more about healthy 
+ relationships!
+LAST-MODIFIED:20190204T160917Z
+LOCATION:Athens Public Library\, 30 Home St\, Athens\, OH 45701\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Teen Dating Violence Awareness Event
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190206T203000Z
+DTEND:20190206T223000Z
+DTSTAMP:20201128T024046Z
+UID:7l8ma53ufrgsdgj3mgq4pi978p@google.com
+CREATED:20190201T165455Z
+DESCRIPTION:Join SAOP for snacks\, games\, and to learn more about healthy 
+ relationships! 
+LAST-MODIFIED:20190201T165455Z
+LOCATION:Coolville Public Library\, 26401 Main St\, Coolville\, OH 45723\, 
+ USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Teen Dating Violence Awareness Event
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190424T213000Z
+DTEND:20190425T010000Z
+DTSTAMP:20201128T024046Z
+UID:7tbptf4nqa9rl16frn8n4ii6cf@google.com
+CREATED:20190201T165119Z
+DESCRIPTION:Join SAOP at the Athens County Public Library for a screening a
+ nd facilitated discussion of the Roll Red Roll documentary. \n\nROLL RED RO
+ LL IS A TRUE-CRIME THRILLER THAT GOES BEHIND THE HEADLINES TO UNCOVER THE D
+ EEP-SEATED AND SOCIAL MEDIA-FUELED “BOYS WILL BE BOYS” CULTURE AT THE ROOT 
+ OF HIGH SCHOOL SEXUAL ASSAULT IN STEUBENVILLE\, OHIO.\n\nMore information a
+ bout the event will be available soon! 
+LAST-MODIFIED:20190201T165119Z
+LOCATION:Athens Public Library\, 30 Home St\, Athens\, OH 45701\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Roll Red Roll Documentary Screening
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190108T203000Z
+DTEND:20190108T224500Z
+DTSTAMP:20201128T024046Z
+UID:3lbqtsoombklncnr58ksm359sj@google.com
+CREATED:20181212T220539Z
+DESCRIPTION:
+LAST-MODIFIED:20190109T002723Z
+LOCATION:Nelsonville Public Library\, 95 W Washington St\, Nelsonville\, OH
+  45764\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Human Trafficking Awareness Event
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190109T203000Z
+DTEND:20190109T223000Z
+DTSTAMP:20201128T024046Z
+UID:3rs8cgvgrfrrqrfvoer22h1bcj@google.com
+CREATED:20181212T220651Z
+DESCRIPTION:
+LAST-MODIFIED:20181212T220652Z
+LOCATION:Coolville Public Library\, 26401 Main St\, Coolville\, OH 45723\, 
+ USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Human Trafficking Awareness Event
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20180928T180000Z
+DTEND:20180928T200000Z
+DTSTAMP:20201128T024046Z
+UID:6vv6d8n24igboequ4ttqqd13gj@google.com
+CREATED:20181029T134227Z
+DESCRIPTION:
+LAST-MODIFIED:20181114T132518Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Clothesline Crafternoon at OU 
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181102T170000Z
+DTEND:20181102T190000Z
+DTSTAMP:20201128T024046Z
+UID:5kg7f7gddfsb8ou04lrh4569ju@google.com
+CREATED:20181026T194309Z
+DESCRIPTION:Join delfin bautista from the OU LGBT Center and SAOP staff for
+  a conversation about religion and sexual violence. 
+LAST-MODIFIED:20181114T132456Z
+LOCATION:77 E State St\, Athens\, OH 45701\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Religion and Sexual Violence Training
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20181115T000000Z
+DTEND:20181115T023000Z
+DTSTAMP:20201128T024046Z
+UID:73e8ke1flfac2qhatkh18c5u0m@google.com
+CREATED:20181026T194827Z
+DESCRIPTION:Mary Annette Pember\, an award-winning Indigenous journalist an
+ d expert on covering sexual assault\, trauma\, policy\, health and the envi
+ ronment\, will advise students and attendees on how to cover sexual assault
+  cases and share expert thoughts on coverage of violence against women.\nHe
+ r keynote address will be followed by a panel of students\, Dr. Patty Stoke
+ s of WGSS\, who has expertise in the prevention and aftermath of sexual ass
+ ault\, and WOUB Editor-In-Chief Allison Hunter.\nThe event will be streamed
+  live on https://acrn.com.\n\nAfter the panel\, refreshments and beverages 
+ will be provided.\n\nCosponsored by the Native American Journalists Associa
+ tion\, E. W. Scripps School of Journalism\, Scripps College of Communicatio
+ n\, Institute for Applied and Professional Ethics\, SPJ OHIO Student Chapte
+ r\, ACRN\, and the LGBT Center
+LAST-MODIFIED:20181026T194827Z
+LOCATION:Schoonover Center\, 20 W Union St\, Athens\, OH 45701\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Sexual Assault in Indian Country and Beyond
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

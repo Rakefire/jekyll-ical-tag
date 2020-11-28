@@ -6,15 +6,18 @@ require "jekyll-ical-tag/version"
 
 module Jekyll
   class IcalTag < Liquid::Block
-    require_relative "jekyll-ical-tag/event"
-    require_relative "jekyll-ical-tag/calendar_parser"
+    require_relative "jekyll-ical-tag/calendar_feed_coordinator"
+    require_relative "jekyll-ical-tag/calendar_fetcher"
     require_relative "jekyll-ical-tag/calendar_limiter"
+    require_relative "jekyll-ical-tag/calendar_parser"
+    require_relative "jekyll-ical-tag/event"
 
     include Convertible
 
     def initialize(tag_name, markup, parse_context)
       super
       @markup = markup
+      @attributes = {}
 
       scan_attributes!
       set_limit!
@@ -31,22 +34,11 @@ module Jekyll
       result = []
 
       context.stack do
-        url = get_dereferenced_url(context) ||
-              @url
+        url = get_dereferenced_url(context) || @url
 
-        raise "No URL provided or in innapropriate form '#{url}'" unless is_valid_url?(url)
-
-        puts "Fetching #{url}"
-
-        parser = CalendarParser.new(url)
-        parser = CalendarLimiter.new(parser, only: @only)
-        parser = CalendarLimiter.new(parser, reverse: @reverse)
-        parser = CalendarLimiter.new(parser, before_date: @before_date)
-        parser = CalendarLimiter.new(parser, after_date: @after_date)
-        parser = CalendarLimiter.new(parser, limit: @limit)
-
-        events = parser.events
-        length = events.length
+        calendar_feed_coordinator = CalendarFeedCoordinator.new(url: url)
+        events = calendar_feed_coordinator.events
+        event_count = events.length
 
         events.each_with_index do |event, index|
           # Init
@@ -69,32 +61,15 @@ module Jekyll
           context["event"]["end_time"] = context["event"]["dtend"]
           context["event"]["start_time"] = context["event"]["dtstart"]
 
-          # Ensure all event values are utf8 encoded strings
-          # Ensure times (from dates)
-          # Ensure present
-          context["event"].transform_values! do |value|
-            v = case value
-              when String, Icalendar::Values::Text
-                value.force_encoding("UTF-8")
-              when Date, Icalendar::Values::DateTime
-                value.to_time
-              when Icalendar::Values::Uri
-                value.to_s
-              else
-                value
-              end
-            v.presence
-          end
-
           context["forloop"] = {
             "name" => "ical",
-            "length" => length,
+            "length" => event_count,
             "index" => index + 1,
             "index0" => index,
-            "rindex" => length - index,
-            "rindex0" => length - index - 1,
+            "rindex" => event_count - index,
+            "rindex0" => event_count - index - 1,
             "first" => (index == 0),
-            "last" => (index == length - 1),
+            "last" => (index == event_count - 1),
           }
 
           result << nodelist.map do |n|
@@ -112,10 +87,6 @@ module Jekyll
 
     private
 
-    def is_valid_url?(url)
-      !!(url =~ URI::regexp)
-    end
-
     def get_dereferenced_url(context)
       return unless context.key?(@url)
 
@@ -123,7 +94,6 @@ module Jekyll
     end
 
     def scan_attributes!
-      @attributes = {}
       @markup.scan(Liquid::TagAttributes) do |key, value|
         @attributes[key] = value
       end
@@ -147,10 +117,11 @@ module Jekyll
       only_past = @attributes["only_past"] == "true"
 
       raise "Set only_future OR only_past, not both" if only_future && only_past
-      @only = case
-        when only_future
+
+      @only =
+        if only_future
           :future
-        when only_past
+        elsif only_past
           :past
         else
           :all
@@ -158,21 +129,19 @@ module Jekyll
     end
 
     def set_before_date!
-      @before_date = begin
-          if @attributes["before_date"]
-            Time.parse(@attributes["before_date"])
-          end
-        rescue => e
+      @before_date =
+        begin
+          Time.parse(@attributes["before_date"])
+        rescue
           nil
         end
     end
 
     def set_after_date!
-      @after_date = begin
-          if @attributes["after_date"]
-            Time.parse(@attributes["after_date"])
-          end
-        rescue => e
+      @after_date =
+        begin
+          Time.parse(@attributes["after_date"])
+        rescue
           nil
         end
     end
