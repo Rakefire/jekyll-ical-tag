@@ -3,7 +3,8 @@ require "spec_helper"
 EXAMPLE_RAW_FEEDS = {
   empty: "",
   basic: File.read("spec/support/basic.ics"),
-  italian: File.read("spec/support/serenoregis.ics")
+  italian: File.read("spec/support/italian.ics"),
+  sesh: File.read("spec/support/sesh.ics")
 }
 
 RSpec.describe Jekyll::IcalTag::CalendarFeedCoordinator do
@@ -173,6 +174,44 @@ RSpec.describe Jekyll::IcalTag::CalendarFeedCoordinator do
                            .or be_a(Date)
                            .or be_a(String)
                            .or be_a(NilClass)
+        end
+      end
+    end
+  end
+
+
+  context "with sesh feed" do
+    let(:fake_url) { "https://www.calendarfeed.com/feed.ics"}
+    let(:mock_feed) { double(:mock_feed, fetch: EXAMPLE_RAW_FEEDS[:sesh])}
+    before { allow(Jekyll::IcalTag::CalendarFetcher).to receive(:new).and_return(mock_feed) }
+    let(:coordinator) { Jekyll::IcalTag::CalendarFeedCoordinator.new(url: fake_url) }
+
+    it "should return accurate event count" do
+      expect(coordinator.events.count).to eq(3)
+    end
+
+    describe "reverse" do
+      let(:coordinator) { Jekyll::IcalTag::CalendarFeedCoordinator.new(url: fake_url, reverse: reverse) }
+
+      context "when reversed" do
+        let(:reverse) { true }
+
+        it "should return dates from oldest to newest first" do
+          first_date = coordinator.events.first.dtstart.to_date
+          last_date = coordinator.events.last.dtstart.to_date
+
+          expect(first_date).to be > last_date
+        end
+      end
+
+      context "when not reversed" do
+        let(:reverse) { false }
+
+        it "should return dates from oldest to newest first" do
+          first_date = coordinator.events.first.dtstart.to_date
+          last_date = coordinator.events.last.dtstart.to_date
+
+          expect(first_date).to be < last_date
         end
       end
     end

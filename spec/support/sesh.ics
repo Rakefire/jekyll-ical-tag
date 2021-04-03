@@ -1,0 +1,42 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Tunks//sesh//EN
+URL:https://sesh.fyi/calendar/98AtNsUKcpeFsCGzc8Zeie.ics
+NAME:ExtraLifeYYC
+X-WR-CALNAME:ExtraLifeYYC
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:822692816056614922@sesh.fyi
+SEQUENCE:0
+DTSTAMP:20210403T012151Z
+DTSTART:20210327T020000Z
+DTEND:20210327T040000Z
+SUMMARY:Detective Pickachu Scener Watch Party
+DESCRIPTION:Detective Pikachu will be available on this coming week. Let's
+  watch the film together with scener.com (you will need a netflix account)
+  and hangout in Discord. Event link is https://scener.com/journ9er?eventId
+ =86048
+END:VEVENT
+BEGIN:VEVENT
+UID:823727157905063947@sesh.fyi
+SEQUENCE:0
+DTSTAMP:20210403T012151Z
+DTSTART:20210330T013000Z
+DTEND:20210330T033000Z
+SUMMARY:Minecraft Monday Night Madness
+DESCRIPTION:Lets get together and build something crazy on our guild minec
+ raft server. Minecraft Java Edition license required.
+END:VEVENT
+BEGIN:VEVENT
+UID:827679589693259836@sesh.fyi
+SEQUENCE:0
+DTSTAMP:20210403T012151Z
+DTSTART:20210409T010000Z
+DTEND:20210409T020000Z
+SUMMARY:Guild Meeting - April 2021
+DESCRIPTION:We'll be reviewing our new website\, discussing plans for comm
+ unity events for the rest of the year\, and some game day updates. Use the
+  meeting voice channel to join.
+END:VEVENT
+END:VCALENDAR
