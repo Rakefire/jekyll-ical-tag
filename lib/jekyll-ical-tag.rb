@@ -109,7 +109,7 @@ module Jekyll
     end
 
     def set_reverse!
-      @reverse = @attributes["order"] == "reverse"
+      @reverse = @attributes["reverse"] == "true"
     end
 
     def set_url!
