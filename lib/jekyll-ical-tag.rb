@@ -24,8 +24,6 @@ module Jekyll
       set_reverse!
       set_url!
       set_only!
-      set_before_date!
-      set_after_date!
     end
 
     def render(context)
@@ -35,8 +33,8 @@ module Jekyll
 
       context.stack do
         url = get_dereferenced_url(context) || @url
-        before_date = dereference_convert_before_date(context)
-        after_date = dereference_convert_after_date(context)
+        before_date = before_date_from(context)
+        after_date = after_date_from(context)
 
         calendar_feed_coordinator = CalendarFeedCoordinator.new(
           url: url, only: @only, reverse: @reverse,
@@ -99,39 +97,36 @@ module Jekyll
       context[@url]
     end
 
-    def dereference_convert_after_date(context)
-      calculated_after_date = ""
-      raw_after_date = ""
-      if context.key?(@after_date) then
-        raw_after_date = context[@after_date]
-      else
-        raw_after_date = @after_date
-      end
-      calculated_after_date =
-        begin
-          Time.parse(raw_after_date)
-        rescue
-          nil
-        end
-      return calculated_after_date
-    end 
+    def after_date_from(context)
+      safely_cast_to_time(
+        dereferenced_liquid_val(context, "after_date")
+      )
+    end
 
-    def dereference_convert_before_date(context)
-      calculated_before_date = ""
-      raw_before_date = ""
-      if context.key?(@before_date) then
-        raw_before_date = context[@before_date]
+    def before_date_from(context)
+      safely_cast_to_time(
+        dereferenced_liquid_val(context, "before_date")
+      )
+    end
+
+    def safely_cast_to_time(val)
+      case val
+      when String
+        Time.parse(val)
+      when Date, DateTime, Time
+        val
+      when NilClass
+        # Do nothing
       else
-        raw_before_date = @before_date
+        raise "Cannot cast to Time: #{val}"
       end
-      calculated_before_date =
-        begin
-          Time.parse(raw_before_date)
-        rescue
-          nil
-        end
-      return calculated_before_date
-    end 
+    end
+
+    def dereferenced_liquid_val(context, variable_name)
+      raw_value = @attributes[variable_name]
+
+      context.key?(raw_value) ? context[raw_value] : raw_value
+    end
 
     def scan_attributes!
       @markup.scan(Liquid::TagAttributes) do |key, value|
@@ -166,14 +161,6 @@ module Jekyll
         else
           :all
         end
-    end
-
-    def set_before_date!
-      @before_date =@attributes["before_date"]
-    end
-
-    def set_after_date!
-      @after_date = @attributes["after_date"]
     end
   end
 end
