@@ -22,10 +22,7 @@ module Jekyll
       scan_attributes!
       set_limit!
       set_reverse!
-      set_url!
       set_only!
-      set_before_date!
-      set_after_date!
     end
 
     def render(context)
@@ -34,11 +31,13 @@ module Jekyll
       result = []
 
       context.stack do
-        url = get_dereferenced_url(context) || @url
+        url = dereferenced_liquid_val(context, "url")
+        before_date = before_date_from(context)
+        after_date = after_date_from(context)
 
         calendar_feed_coordinator = CalendarFeedCoordinator.new(
           url: url, only: @only, reverse: @reverse,
-          before_date: @before_date, after_date: @after_date,
+          before_date: before_date, after_date: after_date,
           limit: @limit
         )
         events = calendar_feed_coordinator.events
@@ -91,10 +90,35 @@ module Jekyll
 
     private
 
-    def get_dereferenced_url(context)
-      return unless context.key?(@url)
+    def after_date_from(context)
+      safely_cast_to_time(
+        dereferenced_liquid_val(context, "after_date")
+      )
+    end
 
-      context[@url]
+    def before_date_from(context)
+      safely_cast_to_time(
+        dereferenced_liquid_val(context, "before_date")
+      )
+    end
+
+    def safely_cast_to_time(val)
+      case val
+      when String
+        Time.parse(val)
+      when Date, DateTime, Time
+        val
+      when NilClass
+        # Do nothing
+      else
+        raise "Cannot cast to Time: #{val}"
+      end
+    end
+
+    def dereferenced_liquid_val(context, variable_name)
+      raw_value = @attributes[variable_name]
+
+      context.key?(raw_value) ? context[raw_value] : raw_value
     end
 
     def scan_attributes!
@@ -112,10 +136,6 @@ module Jekyll
       @reverse = @attributes["reverse"] == "true"
     end
 
-    def set_url!
-      @url = @attributes["url"]
-    end
-
     def set_only!
       only_future = @attributes["only_future"] == "true"
       only_past = @attributes["only_past"] == "true"
@@ -129,24 +149,6 @@ module Jekyll
           :past
         else
           :all
-        end
-    end
-
-    def set_before_date!
-      @before_date =
-        begin
-          Time.parse(@attributes["before_date"])
-        rescue
-          nil
-        end
-    end
-
-    def set_after_date!
-      @after_date =
-        begin
-          Time.parse(@attributes["after_date"])
-        rescue
-          nil
         end
     end
   end
