@@ -22,7 +22,6 @@ module Jekyll
       scan_attributes!
       set_limit!
       set_reverse!
-      set_url!
       set_only!
     end
 
@@ -32,7 +31,7 @@ module Jekyll
       result = []
 
       context.stack do
-        url = get_dereferenced_url(context) || @url
+        url = dereferenced_liquid_val(context, "url")
         before_date = before_date_from(context)
         after_date = after_date_from(context)
 
@@ -91,12 +90,6 @@ module Jekyll
 
     private
 
-    def get_dereferenced_url(context)
-      return unless context.key?(@url)
-
-      context[@url]
-    end
-
     def after_date_from(context)
       safely_cast_to_time(
         dereferenced_liquid_val(context, "after_date")
@@ -141,10 +134,6 @@ module Jekyll
 
     def set_reverse!
       @reverse = @attributes["reverse"] == "true"
-    end
-
-    def set_url!
-      @url = @attributes["url"]
     end
 
     def set_only!
