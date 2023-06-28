@@ -54,6 +54,12 @@ RSpec.describe Jekyll::IcalTag::CalendarFeedCoordinator do
     before { allow(Jekyll::IcalTag::CalendarFetcher).to receive(:new).and_return(mock_feed) }
     let(:coordinator) { Jekyll::IcalTag::CalendarFeedCoordinator.new(url: fake_url) }
 
+    around do |example|
+      travel_to Date.parse("2021-01-01") do
+        example.run
+      end
+    end
+
     it "should not raise error" do
       expect {
         coordinator.events
