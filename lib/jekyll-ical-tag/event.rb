@@ -80,7 +80,7 @@ module Jekyll
           props.transform_values! do |value|
             new_value =
               case value
-              when Array, Icalendar::Values::Array
+              when Array, Icalendar::Values::Helpers::Array
                 value.join("\n").force_encoding("UTF-8")
               when String, Icalendar::Values::Text
                 value.force_encoding("UTF-8")

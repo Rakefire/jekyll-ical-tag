@@ -33,7 +33,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "jekyll", "> 3"
   spec.add_dependency "api_cache"
   spec.add_dependency "activesupport"
-  spec.add_dependency "icalendar"
+  spec.add_dependency "icalendar", "~> 2.10.1"
 
   spec.add_development_dependency "bundler", "~> 1.15"
   spec.add_development_dependency "rspec", "~> 3.5"
