@@ -3,6 +3,7 @@
 
 require "uri"
 require "active_support"
+require "active_support/core_ext/object/blank"
 
 module Jekyll
   class IcalTag

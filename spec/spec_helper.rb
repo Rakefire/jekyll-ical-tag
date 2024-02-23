@@ -1,5 +1,6 @@
 require "rspec"
 
+require "active_support"
 require "active_support/testing/time_helpers"
 require "./lib/jekyll-ical-tag"
 
