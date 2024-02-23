@@ -2,6 +2,6 @@
 
 module Jekyll
   class IcalTag < Liquid::Block
-    VERSION = "1.4.0"
+    VERSION = "1.5"
   end
 end
