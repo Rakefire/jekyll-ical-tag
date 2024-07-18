@@ -34,6 +34,10 @@ GEM
       concurrent-ruby (~> 1.0)
     icalendar (2.10.1)
       ice_cube (~> 0.16)
+    icalendar-recurrence (1.2.0)
+      icalendar (~> 2.0)
+      ice_cube (~> 0.16)
+      tzinfo (~> 2.0)
     ice_cube (0.16.4)
     jekyll (4.3.2)
       addressable (~> 2.4)
@@ -112,6 +116,7 @@ DEPENDENCIES
   activesupport
   api_cache
   icalendar (~> 2.10.1)
+  icalendar-recurrence
   jekyll
   nokogiri
   rspec

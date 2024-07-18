@@ -23,6 +23,7 @@ module Jekyll
       set_limit!
       set_reverse!
       set_only!
+      set_recurring_dates!
     end
 
     def render(context)
@@ -36,9 +37,14 @@ module Jekyll
         after_date = after_date_from(context)
 
         calendar_feed_coordinator = CalendarFeedCoordinator.new(
-          url: url, only: @only, reverse: @reverse,
-          before_date: before_date, after_date: after_date,
-          limit: @limit
+          url: url,
+          only: @only,
+          reverse: @reverse,
+          before_date: before_date,
+          after_date: after_date,
+          limit: @limit,
+          recurring_start_date: @recurring_start_date,
+          recurring_end_date: @recurring_end_date
         )
         events = calendar_feed_coordinator.events
         event_count = events.length
@@ -150,6 +156,18 @@ module Jekyll
         else
           :all
         end
+    end
+
+    def set_recurring_dates!
+      @recurring_end_date =
+        safely_cast_to_time(
+         dereferenced_liquid_val(context, "recurring_end_date")
+        )
+
+      @recurring_start_date =
+        safely_cast_to_time(
+         dereferenced_liquid_val(context, "recurring_start_date")
+        )
     end
   end
 end
