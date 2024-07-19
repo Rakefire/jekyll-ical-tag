@@ -1,3 +1,5 @@
+[![Actions Status](https://github.com/Rakefire/jekyll-ical-tag/workflows/CI/badge.svg)](https://github.com/Rakefire/jekyll-ical-tag/actions)
+
 # Jekyll ical tag
 
 Author: Ricky Chilcott https://www.rakefire.io
