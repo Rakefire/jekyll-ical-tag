@@ -64,4 +64,4 @@ A few helper properties are also supported:
 
 # Special Thanks
 
-Special thanks to the following contributors: @marchehab98 @meitar
+Special thanks to the following contributors: [@marchehab98](github.com/marchehab98] [@meitar](github.com/meitar) [@whatnotery](github.com/whatnotery)
