@@ -23,13 +23,9 @@ module Jekyll
 
       def parsed_events
         events = Icalendar::Event.parse(@raw_feed)
-
-        recurring_events =
-          events.flat_map do |event|
-            next unless event.rrule.present?
-
+          .flat_map do |event|
             event
-              .occurrences_between(@recurring_start_date, @recurring_end_date).drop(1)
+              .occurrences_between(@recurring_start_date, @recurring_end_date)
               .map do |occurrence|
                 event.dup.tap do |e| # return a new event with the same attributes, but different start and end times
                   e.dtstart = occurrence.start_time
@@ -37,7 +33,7 @@ module Jekyll
                 end
               end
           end.compact
-        events.concat(recurring_events)
+        events
       end
     end
   end
