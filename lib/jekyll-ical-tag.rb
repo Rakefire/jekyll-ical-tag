@@ -1,4 +1,3 @@
-# encoding: utf-8
 # frozen_string_literal: true
 
 require "jekyll"
@@ -80,7 +79,7 @@ module Jekyll
             "rindex" => event_count - index,
             "rindex0" => event_count - index - 1,
             "first" => (index == 0),
-            "last" => (index == event_count - 1),
+            "last" => (index == event_count - 1)
           }
 
           result << nodelist.map do |n|
@@ -165,12 +164,12 @@ module Jekyll
     def set_recurring_dates!
       @recurring_end_date =
         safely_cast_to_time(
-         dereferenced_liquid_val("recurring_end_date")
+          dereferenced_liquid_val("recurring_end_date")
         )
 
       @recurring_start_date =
         safely_cast_to_time(
-         dereferenced_liquid_val("recurring_start_date")
+          dereferenced_liquid_val("recurring_start_date")
         )
     end
   end

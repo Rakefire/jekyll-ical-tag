@@ -1,13 +1,14 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem 'jekyll', require: false
+gem "jekyll", require: false
 
-gem 'api_cache'
-gem 'icalendar', "~> 2.10.1"
-gem 'icalendar-recurrence'
-gem 'activesupport'
+gem "activesupport"
+gem "api_cache"
+gem "icalendar", "~> 2.10.1"
+gem "icalendar-recurrence"
 
 group :development, :test do
-  gem 'rspec'
-  gem 'nokogiri'
+  gem "rspec"
+  gem "nokogiri"
+  gem "standard"
 end

@@ -1,4 +1,3 @@
-# encoding: utf-8
 # frozen_string_literal: true
 
 module Jekyll
@@ -10,28 +9,27 @@ module Jekyll
       end
 
       def events
-        case
-        when options[:only] == :future
+        if options[:only] == :future
           now = Time.now
           parser.events.select do |event|
             event.dtstart.to_time >= now
           end
-        when options[:only] == :past
+        elsif options[:only] == :past
           now = Time.now
           parser.events.select do |event|
             event.dtstart.to_time < now
           end
-        when options[:reverse]
+        elsif options[:reverse]
           parser.events.reverse
-        when options[:after_date]
+        elsif options[:after_date]
           parser.events.select do |event|
             event.dtstart.to_time >= options[:after_date]
           end
-        when options[:before_date]
+        elsif options[:before_date]
           parser.events.select do |event|
             event.dtstart.to_time < options[:before_date]
           end
-        when options[:limit]
+        elsif options[:limit]
           parser.events.first(options[:limit])
         else
           parser.events

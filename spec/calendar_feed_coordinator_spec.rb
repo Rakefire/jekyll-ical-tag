@@ -33,8 +33,8 @@ RSpec.describe Jekyll::IcalTag::CalendarFeedCoordinator do
   end
 
   context "with empty feed" do
-    let(:fake_url) { "https://www.calendarfeed.com/feed.ics"}
-    let(:mock_feed) { double(:mock_feed, fetch: EXAMPLE_RAW_FEEDS[:empty])}
+    let(:fake_url) { "https://www.calendarfeed.com/feed.ics" }
+    let(:mock_feed) { double(:mock_feed, fetch: EXAMPLE_RAW_FEEDS[:empty]) }
 
     before do
       allow(Jekyll::IcalTag::CalendarFetcher).to receive(:new).and_return(mock_feed)
@@ -52,8 +52,8 @@ RSpec.describe Jekyll::IcalTag::CalendarFeedCoordinator do
   end
 
   context "with basic feed" do
-    let(:fake_url) { "https://www.calendarfeed.com/feed.ics"}
-    let(:mock_feed) { double(:mock_feed, fetch: EXAMPLE_RAW_FEEDS[:basic])}
+    let(:fake_url) { "https://www.calendarfeed.com/feed.ics" }
+    let(:mock_feed) { double(:mock_feed, fetch: EXAMPLE_RAW_FEEDS[:basic]) }
     before { allow(Jekyll::IcalTag::CalendarFetcher).to receive(:new).and_return(mock_feed) }
     let(:coordinator) { Jekyll::IcalTag::CalendarFeedCoordinator.new(url: fake_url) }
 
@@ -150,8 +150,8 @@ RSpec.describe Jekyll::IcalTag::CalendarFeedCoordinator do
   end
 
   context "with italian feed" do
-    let(:fake_url) { "https://www.calendarfeed.com/feed.ics"}
-    let(:mock_feed) { double(:mock_feed, fetch: EXAMPLE_RAW_FEEDS[:italian])}
+    let(:fake_url) { "https://www.calendarfeed.com/feed.ics" }
+    let(:mock_feed) { double(:mock_feed, fetch: EXAMPLE_RAW_FEEDS[:italian]) }
     before { allow(Jekyll::IcalTag::CalendarFetcher).to receive(:new).and_return(mock_feed) }
     let(:coordinator) { Jekyll::IcalTag::CalendarFeedCoordinator.new(url: fake_url) }
 
@@ -180,17 +180,17 @@ RSpec.describe Jekyll::IcalTag::CalendarFeedCoordinator do
         expect(event.description.to_s).to be_a String
         event.all_properties.each do |property, value|
           expect(value).to be_a(Time)
-                           .or be_a(Date)
-                           .or be_a(String)
-                           .or be_a(NilClass)
+            .or be_a(Date)
+            .or be_a(String)
+            .or be_a(NilClass)
         end
       end
     end
   end
 
   context "with sesh feed" do
-    let(:fake_url) { "https://www.calendarfeed.com/feed.ics"}
-    let(:mock_feed) { double(:mock_feed, fetch: EXAMPLE_RAW_FEEDS[:sesh])}
+    let(:fake_url) { "https://www.calendarfeed.com/feed.ics" }
+    let(:mock_feed) { double(:mock_feed, fetch: EXAMPLE_RAW_FEEDS[:sesh]) }
     before { allow(Jekyll::IcalTag::CalendarFetcher).to receive(:new).and_return(mock_feed) }
     let(:coordinator) { Jekyll::IcalTag::CalendarFeedCoordinator.new(url: fake_url) }
 
@@ -226,8 +226,8 @@ RSpec.describe Jekyll::IcalTag::CalendarFeedCoordinator do
   end
 
   context "with recurrent events" do
-    let(:fake_url) { "https://www.calendarfeed.com/feed.ics"}
-    let(:mock_feed) { double(:mock_feed, fetch: EXAMPLE_RAW_FEEDS[:recurring])}
+    let(:fake_url) { "https://www.calendarfeed.com/feed.ics" }
+    let(:mock_feed) { double(:mock_feed, fetch: EXAMPLE_RAW_FEEDS[:recurring]) }
     before { allow(Jekyll::IcalTag::CalendarFetcher).to receive(:new).and_return(mock_feed) }
     let(:coordinator) { Jekyll::IcalTag::CalendarFeedCoordinator.new(url: fake_url) }
 

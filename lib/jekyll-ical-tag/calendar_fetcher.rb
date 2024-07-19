@@ -1,4 +1,3 @@
-# encoding: utf-8
 # frozen_string_literal: true
 
 require "cgi"
@@ -23,7 +22,7 @@ module Jekyll
       attr_reader :url
 
       def is_valid_url?
-        !!(url =~ URI::regexp)
+        !!(url =~ URI::DEFAULT_PARSER.make_regexp)
       end
     end
   end
