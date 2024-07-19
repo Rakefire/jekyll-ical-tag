@@ -1,4 +1,3 @@
-# encoding: utf-8
 # frozen_string_literal: true
 
 require "uri"
@@ -39,17 +38,18 @@ module Jekyll
       attr_reader :all_properties
 
       def simple_html_description
-        @simple_html_description ||= begin
-          description.clone.tap do |description|
-            description_urls.each do |url|
-              description.gsub! url, %(<a href='#{url}'>#{url}</a>)
-            end
+        @simple_html_description ||= description.clone.tap do |description|
+          description_urls.each do |url|
+            description.gsub! url, %(<a href='#{url}'>#{url}</a>)
           end
         end
       end
 
       def attendees
-        ical_event.attendee.map(&:to_s).map { |a| a.slice!("mailto:"); a }
+        ical_event.attendee.map(&:to_s).map { |a|
+          a.slice!("mailto:")
+          a
+        }
       end
 
       def description_urls

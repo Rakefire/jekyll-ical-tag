@@ -1,4 +1,3 @@
-# encoding: utf-8
 # frozen_string_literal: true
 
 require "active_support"
@@ -12,8 +11,8 @@ module Jekyll
       end
 
       def events
-        @events ||= parsed_feed.sort { |event1, event2| event1.dtstart <=> event2.dtstart }
-                               .map { |event| Jekyll::IcalTag::Event.new(event) }
+        @events ||= parsed_feed.sort_by(&:dtstart)
+          .map { |event| Jekyll::IcalTag::Event.new(event) }
       end
 
       private

@@ -1,4 +1,3 @@
-# encoding: utf-8
 # frozen_string_literal: true
 
 require "jekyll"
@@ -72,7 +71,7 @@ module Jekyll
             "rindex" => event_count - index,
             "rindex0" => event_count - index - 1,
             "first" => (index == 0),
-            "last" => (index == event_count - 1),
+            "last" => (index == event_count - 1)
           }
 
           result << nodelist.map do |n|
