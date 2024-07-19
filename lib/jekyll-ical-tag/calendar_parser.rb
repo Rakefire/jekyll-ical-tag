@@ -14,15 +14,14 @@ module Jekyll
       end
 
       def events
-        @events ||= parsed_events.sort { |event1, event2| event1.dtstart <=> event2.dtstart }
-                                 .map { |event| Jekyll::IcalTag::Event.new(event) }
+        @events ||= parsed_events.sort_by(&:dtstart)
+          .map { |event| Jekyll::IcalTag::Event.new(event) }
       end
 
       private
 
-
       def parsed_events
-        events = Icalendar::Event.parse(@raw_feed)
+        Icalendar::Event.parse(@raw_feed)
           .flat_map do |event|
             event
               .occurrences_between(@recurring_start_date, @recurring_end_date)
@@ -33,7 +32,6 @@ module Jekyll
                 end
               end
           end.compact
-        events
       end
     end
   end

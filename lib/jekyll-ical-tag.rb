@@ -164,12 +164,12 @@ module Jekyll
     def set_recurring_dates!
       @recurring_end_date =
         safely_cast_to_time(
-         dereferenced_liquid_val("recurring_end_date")
+          dereferenced_liquid_val("recurring_end_date")
         )
 
       @recurring_start_date =
         safely_cast_to_time(
-         dereferenced_liquid_val("recurring_start_date")
+          dereferenced_liquid_val("recurring_start_date")
         )
     end
   end

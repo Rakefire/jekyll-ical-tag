@@ -226,8 +226,8 @@ RSpec.describe Jekyll::IcalTag::CalendarFeedCoordinator do
   end
 
   context "with recurrent events" do
-    let(:fake_url) { "https://www.calendarfeed.com/feed.ics"}
-    let(:mock_feed) { double(:mock_feed, fetch: EXAMPLE_RAW_FEEDS[:recurring])}
+    let(:fake_url) { "https://www.calendarfeed.com/feed.ics" }
+    let(:mock_feed) { double(:mock_feed, fetch: EXAMPLE_RAW_FEEDS[:recurring]) }
     before { allow(Jekyll::IcalTag::CalendarFetcher).to receive(:new).and_return(mock_feed) }
     let(:coordinator) { Jekyll::IcalTag::CalendarFeedCoordinator.new(url: fake_url) }
 
