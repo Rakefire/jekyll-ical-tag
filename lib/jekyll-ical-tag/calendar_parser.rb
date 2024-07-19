@@ -2,25 +2,25 @@
 
 require "active_support"
 require "icalendar"
+require "icalendar/recurrence"
 
 module Jekyll
   class IcalTag
     class CalendarParser
-      def initialize(raw_feed)
+      def initialize(raw_feed, recurring_start_date:, recurring_end_date:)
         @raw_feed = raw_feed
+        @recurring_start_date = recurring_start_date
+        @recurring_end_date = recurring_end_date
       end
 
       def events
-        @events ||= parsed_feed.sort_by(&:dtstart)
-          .map { |event| Jekyll::IcalTag::Event.new(event) }
+        @events ||= parsed_events.sort { |event1, event2| event1.dtstart <=> event2.dtstart }
+                                 .map { |event| Jekyll::IcalTag::Event.new(event) }
       end
 
       private
 
-<<<<<<< Updated upstream
-      def parsed_feed
-        Icalendar::Event.parse(@raw_feed)
-=======
+
       def parsed_events
         events = Icalendar::Event.parse(@raw_feed)
 
@@ -36,11 +36,8 @@ module Jekyll
                   e.dtend = occurrence.end_time
                 end
               end
-          end
-          .compact
-
+          end.compact
         events.concat(recurring_events)
->>>>>>> Stashed changes
       end
     end
   end
