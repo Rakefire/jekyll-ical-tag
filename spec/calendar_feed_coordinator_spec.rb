@@ -232,7 +232,7 @@ RSpec.describe Jekyll::IcalTag::CalendarFeedCoordinator do
     let(:coordinator) { Jekyll::IcalTag::CalendarFeedCoordinator.new(url: fake_url) }
 
     it "should return accurate event count" do
-      expect(coordinator.events.count).to eq(54)
+      expect(coordinator.events.count).to eq(53)
     end
 
     it "should not have duplicate events" do
@@ -249,7 +249,7 @@ RSpec.describe Jekyll::IcalTag::CalendarFeedCoordinator do
       let(:coordinator) { Jekyll::IcalTag::CalendarFeedCoordinator.new(url: fake_url, recurring_start_date: recurring_start_date, recurring_end_date: recurring_end_date) }
 
       it "should return accurate event count" do
-        expect(coordinator.events.count).to eq(6)
+        expect(coordinator.events.count).to eq(5)
       end
     end
   end

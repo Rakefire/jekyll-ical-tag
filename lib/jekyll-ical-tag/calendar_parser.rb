@@ -28,7 +28,7 @@ module Jekyll
             next unless event.rrule.present?
 
             event
-              .occurrences_between(@recurring_start_date, @recurring_end_date)
+              .occurrences_between(@recurring_start_date, @recurring_end_date).drop(1)
               .map do |occurrence|
                 event.dup.tap do |e| # return a new event with the same attributes, but different start and end times
                   e.dtstart = occurrence.start_time
