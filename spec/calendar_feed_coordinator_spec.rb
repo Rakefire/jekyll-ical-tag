@@ -233,14 +233,18 @@ RSpec.describe Jekyll::IcalTag::CalendarFeedCoordinator do
 
     # The recurring events are from July 1, 2024...
     # Travel to before the event starts to ensure we don't get duplicate events
-    around do |example|
-      travel_to Date.parse("2024-06-1") do
-        example.run
-      end
+    after do |example|
+      travel_back
     end
 
-    it "should return accurate event count" do
+    it "when the primary event starts in the future, is has the proper event count" do
+      travel_to Date.parse("2024-06-1")
       expect(coordinator.events.count).to eq(49)
+    end
+
+    it "when the primary event starts in the past, is has the proper event count" do
+      travel_to Date.parse("2024-08-1")
+      expect(coordinator.events.count).to eq(54)
     end
 
     it "should not have duplicate events" do
@@ -257,6 +261,7 @@ RSpec.describe Jekyll::IcalTag::CalendarFeedCoordinator do
       let(:coordinator) { Jekyll::IcalTag::CalendarFeedCoordinator.new(url: fake_url, recurring_start_date: recurring_start_date, recurring_end_date: recurring_end_date) }
 
       it "should return accurate event count" do
+        travel_to Date.parse("2024-07-1")
         expect(coordinator.events.count).to eq(5)
       end
     end
