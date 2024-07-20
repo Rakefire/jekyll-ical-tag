@@ -25,19 +25,27 @@ module Jekyll
     end
 
     def render(context)
+      self.context = context
       context.registers[:ical] ||= Hash.new(0)
+
+      set_recurring_dates!
 
       result = []
 
       context.stack do
-        url = dereferenced_liquid_val(context, "url")
-        before_date = before_date_from(context)
-        after_date = after_date_from(context)
+        url = dereferenced_liquid_val("url")
+        before_date = before_date_from
+        after_date = after_date_from
 
         calendar_feed_coordinator = CalendarFeedCoordinator.new(
-          url: url, only: @only, reverse: @reverse,
-          before_date: before_date, after_date: after_date,
-          limit: @limit
+          url: url,
+          only: @only,
+          reverse: @reverse,
+          before_date: before_date,
+          after_date: after_date,
+          limit: @limit,
+          recurring_start_date: @recurring_start_date,
+          recurring_end_date: @recurring_end_date
         )
         events = calendar_feed_coordinator.events
         event_count = events.length
@@ -89,15 +97,17 @@ module Jekyll
 
     private
 
-    def after_date_from(context)
+    attr_accessor :context
+
+    def after_date_from
       safely_cast_to_time(
-        dereferenced_liquid_val(context, "after_date")
+        dereferenced_liquid_val("after_date")
       )
     end
 
-    def before_date_from(context)
+    def before_date_from
       safely_cast_to_time(
-        dereferenced_liquid_val(context, "before_date")
+        dereferenced_liquid_val("before_date")
       )
     end
 
@@ -114,7 +124,7 @@ module Jekyll
       end
     end
 
-    def dereferenced_liquid_val(context, variable_name)
+    def dereferenced_liquid_val(variable_name)
       raw_value = @attributes[variable_name]
 
       context.key?(raw_value) ? context[raw_value] : raw_value
@@ -149,6 +159,18 @@ module Jekyll
         else
           :all
         end
+    end
+
+    def set_recurring_dates!
+      @recurring_end_date =
+        safely_cast_to_time(
+          dereferenced_liquid_val("recurring_end_date")
+        )
+
+      @recurring_start_date =
+        safely_cast_to_time(
+          dereferenced_liquid_val("recurring_start_date")
+        )
     end
   end
 end

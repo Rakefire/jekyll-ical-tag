@@ -40,8 +40,11 @@ plugins:
 - `only_future` - Defaults to 'false', limits returned events to start_time after now.
 
 - `before_date` - limits returned events to dates before a specific date. This gets parsed with Ruby's Time.parse (e.g. 01-01-2018)
-- `after_date` - limits returned events to dates before a specific date. This gets parsed with Ruby's Time.parse (e.g. 01-01-2018).
+- `after_date` - limits returned events to dates after a specific date. This gets parsed with Ruby's Time.parse (e.g. 01-01-2018).
 - `limit` - limits the number of returned events to the first N events matching the specified criteria. For example, `{% ical url: https://example.com/events.ics only_future:true limit:5 %}` returns the first five future events.
+
+- `recurring_start_date` - limits returned events to recurring occurances after a specific date. If you don't have recurring events in your feed, you can ignore it. Deafults to 'today'
+- `recurring_end_date` - limits returned events to recurring occurances before a specific date. If you don't have recurring events in your feed, you can ignore it. Deafults to '1 year from today'
 
 ## Event Attributes:
 
@@ -63,4 +66,4 @@ A few helper properties are also supported:
 
 # Special Thanks
 
-Special thanks to the following contributors: @marchehab98 @meitar
+Special thanks to the following contributors: [@marchehab98](github.com/marchehab98] [@meitar](github.com/meitar) [@whatnotery](github.com/whatnotery)

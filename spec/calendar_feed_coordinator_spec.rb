@@ -1,11 +1,14 @@
 require "spec_helper"
 
-EXAMPLE_RAW_FEEDS = {
-  empty: "",
-  basic: File.read("spec/support/basic.ics"),
-  italian: File.read("spec/support/italian.ics"),
-  sesh: File.read("spec/support/sesh.ics")
-}
+EXAMPLE_RAW_FEEDS =
+  Dir
+    .glob("spec/support/*.ics")
+    .each_with_object({}) do |file, hash|
+      hash[File.basename(file, ".ics").downcase.underscore.to_sym] = File.read(file)
+    end
+    .merge(
+      empty: ""
+    )
 
 RSpec.describe Jekyll::IcalTag::CalendarFeedCoordinator do
   context "happy path" do
@@ -218,6 +221,48 @@ RSpec.describe Jekyll::IcalTag::CalendarFeedCoordinator do
 
           expect(first_date).to be < last_date
         end
+      end
+    end
+  end
+
+  context "with recurrent events" do
+    let(:fake_url) { "https://www.calendarfeed.com/feed.ics" }
+    let(:mock_feed) { double(:mock_feed, fetch: EXAMPLE_RAW_FEEDS[:recurring]) }
+    before { allow(Jekyll::IcalTag::CalendarFetcher).to receive(:new).and_return(mock_feed) }
+    let(:coordinator) { Jekyll::IcalTag::CalendarFeedCoordinator.new(url: fake_url) }
+
+    # The recurring events are from July 1, 2024...
+    # Travel to before the event starts to ensure we don't get duplicate events
+    after do |example|
+      travel_back
+    end
+
+    it "when the primary event starts in the future, is has the proper event count" do
+      travel_to Date.parse("2024-06-1")
+      expect(coordinator.events.count).to eq(49)
+    end
+
+    it "when the primary event starts in the past, is has the proper event count" do
+      travel_to Date.parse("2024-08-1")
+      expect(coordinator.events.count).to eq(54)
+    end
+
+    it "should not have duplicate events" do
+      start_times = coordinator.events.map(&:dtstart).map(&:to_time)
+      expect(start_times.count).to eq(start_times.uniq.count)
+
+      end_times = coordinator.events.map(&:dtend).map(&:to_time)
+      expect(end_times.count).to eq(end_times.uniq.count)
+    end
+
+    context "with recurring_start_date and recurring_end_date" do
+      let(:recurring_start_date) { Date.parse("July 1, 2024") }
+      let(:recurring_end_date) { Date.parse("July 30, 2024") }
+      let(:coordinator) { Jekyll::IcalTag::CalendarFeedCoordinator.new(url: fake_url, recurring_start_date: recurring_start_date, recurring_end_date: recurring_end_date) }
+
+      it "should return accurate event count" do
+        travel_to Date.parse("2024-07-1")
+        expect(coordinator.events.count).to eq(5)
       end
     end
   end
