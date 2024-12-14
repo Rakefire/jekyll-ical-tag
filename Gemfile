@@ -11,4 +11,5 @@ group :development, :test do
   gem "rspec"
   gem "nokogiri"
   gem "standard"
+  gem "csv"
 end
