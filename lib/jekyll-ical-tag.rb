@@ -17,11 +17,27 @@ module Jekyll
       super
       @markup = markup
       @attributes = {}
+      @main_block = Liquid::BlockBody.new
+      @empty_block = nil
 
       scan_attributes!
       set_limit!
       set_reverse!
       set_only!
+    end
+
+    def parse(tokens)
+      return unless parse_body(@main_block, tokens)
+      parse_body(@empty_block, tokens)
+    end
+
+    def nodelist
+      @empty_block ? [@main_block, @empty_block] : [@main_block]
+    end
+
+    def unknown_tag(tag, markup, tokens)
+      return super unless tag == "empty"
+      @empty_block = Liquid::BlockBody.new
     end
 
     def render(context)
@@ -48,47 +64,46 @@ module Jekyll
           recurring_end_date: @recurring_end_date
         )
         events = calendar_feed_coordinator.events
-        event_count = events.length
 
-        events.each_with_index do |event, index|
-          # Init
-          context["event"] = {}
+        if events.empty?
+          result << @empty_block.render(context) if @empty_block
+        else
+          event_count = events.length
 
-          # Jekyll helper variables
-          context["event"]["index"] = index
+          events.each_with_index do |event, index|
+            # Init
+            context["event"] = {}
 
-          # RFC 5545 conformant and custom properties.
-          context["event"].merge!(event.all_properties)
+            # Jekyll helper variables
+            context["event"]["index"] = index
 
-          # Supported but non-standard attributes.
-          context["event"]["attendees"] = event.attendees
-          context["event"]["simple_html_description"] = event.simple_html_description
+            # RFC 5545 conformant and custom properties.
+            context["event"].merge!(event.all_properties)
 
-          # Overridden values
-          context["event"]["url"] ||= event.description_urls.first
+            # Supported but non-standard attributes.
+            context["event"]["attendees"] = event.attendees
+            context["event"]["simple_html_description"] = event.simple_html_description
 
-          # Deprecated attribute names.
-          context["event"]["end_time"] = context["event"]["dtend"]
-          context["event"]["start_time"] = context["event"]["dtstart"]
+            # Overridden values
+            context["event"]["url"] ||= event.description_urls.first
 
-          context["forloop"] = {
-            "name" => "ical",
-            "length" => event_count,
-            "index" => index + 1,
-            "index0" => index,
-            "rindex" => event_count - index,
-            "rindex0" => event_count - index - 1,
-            "first" => (index == 0),
-            "last" => (index == event_count - 1)
-          }
+            # Deprecated attribute names.
+            context["event"]["end_time"] = context["event"]["dtend"]
+            context["event"]["start_time"] = context["event"]["dtstart"]
 
-          result << nodelist.map do |n|
-            if n.respond_to? :render
-              n.render(context)
-            else
-              n
-            end
-          end.join
+            context["forloop"] = {
+              "name" => "ical",
+              "length" => event_count,
+              "index" => index + 1,
+              "index0" => index,
+              "rindex" => event_count - index,
+              "rindex0" => event_count - index - 1,
+              "first" => (index == 0),
+              "last" => (index == event_count - 1)
+            }
+
+            result << @main_block.render(context)
+          end
         end
       end
 
