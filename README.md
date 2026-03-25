@@ -33,6 +33,21 @@ plugins:
   {% endical %}
 ```
 
+### Empty state
+
+Use the `{% empty %}` tag to display fallback content when the calendar has no events:
+
+```html
+  {% ical url: https://space.floern.com/launch.ics only_future: true %}
+    <div class="event">
+      <h3>{{ event.summary }}</h3>
+      <p>{{ event.dtstart | date: "%B %d, %Y" }}</p>
+    </div>
+  {% empty %}
+    <p>No upcoming events scheduled.</p>
+  {% endical %}
+```
+
 ## Options
 
 - `reverse` - Defaults to 'false', ordering events by start_time (or reverse start_time).
