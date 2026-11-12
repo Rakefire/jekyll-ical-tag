@@ -32,7 +32,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "jekyll", "> 3"
   spec.add_dependency "api_cache"
-  spec.add_dependency "activesupport", "~> 7.1"
+  spec.add_dependency "activesupport", ">= 8.0.5.2"
   spec.add_dependency "icalendar", "~> 2.10.1"
   spec.add_dependency "icalendar-recurrence"
 
