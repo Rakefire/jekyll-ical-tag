@@ -4,7 +4,7 @@ gem "jekyll", require: false
 
 gem "activesupport"
 gem "api_cache"
-gem "icalendar", "~> 2.10.1"
+gem "icalendar", "~> 2.12", ">= 2.12.2"
 gem "icalendar-recurrence"
 
 group :development, :test do
