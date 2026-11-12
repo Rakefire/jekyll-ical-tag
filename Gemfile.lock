@@ -176,6 +176,7 @@ DEPENDENCIES
   icalendar-recurrence
   jekyll
   nokogiri
+  rake
   rspec
   standard
 

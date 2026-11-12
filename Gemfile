@@ -8,6 +8,7 @@ gem "icalendar", "~> 2.12", ">= 2.12.2"
 gem "icalendar-recurrence"
 
 group :development, :test do
+  gem "rake"
   gem "rspec"
   gem "nokogiri"
   gem "standard"
